@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fWh-0B-RZt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="ZP9-Ly-5gr">
+            <objects>
+                <viewController id="fWh-0B-RZt" customClass="MainViewController" customModule="FruitViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ptK-ds-e3c"/>
+                        <viewControllerLayoutGuide type="bottom" id="BPe-oV-xkJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fku-Un-8Vp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbc_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z07-7T-maS">
+                                <rect key="frame" x="93.5" y="302.5" width="187.5" height="61.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z07-7T-maS" secondAttribute="height" multiplier="3.04" id="f7r-iV-UR6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z07-7T-maS" firstAttribute="width" secondItem="fku-Un-8Vp" secondAttribute="width" multiplier="0.5" id="2d9-mq-8UN"/>
+                            <constraint firstItem="Z07-7T-maS" firstAttribute="centerX" secondItem="fku-Un-8Vp" secondAttribute="centerX" id="XI2-CN-748"/>
+                            <constraint firstItem="Z07-7T-maS" firstAttribute="centerY" secondItem="fku-Un-8Vp" secondAttribute="centerY" id="nRf-JD-NB6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bbcLogo" destination="Z07-7T-maS" id="o0b-kE-rZ2"/>
+                        <segue destination="2r3-vX-jGF" kind="presentation" identifier="MainToPhotoViewerViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Q7i-eq-DSD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMc-1j-9V7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="80"/>
+        </scene>
+        <!--PhotoViewer-->
+        <scene sceneID="DKm-HX-Mb6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoViewer" id="2r3-vX-jGF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMP-Ta-Pne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="79"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bbc_logo" width="3425" height="1125"/>
+    </resources>
+</document>
