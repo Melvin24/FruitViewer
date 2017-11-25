@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         usageStatsHandler.activate()
         
-        
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
         
         let mainViewController = UIStoryboard.instantiateViewControllerFromStoryboard(withName: MainViewController.Storyboard.name)

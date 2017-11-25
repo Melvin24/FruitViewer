@@ -70,7 +70,13 @@ class UsageStatsHandler {
                 return
             }
             
+            let dispatchGroup = dispatchGroupForUsageStatsType(usageStatsType)
+            
+            dispatchGroup?.enter()
+            
             task = try request { [weak self] success, error in
+                
+                dispatchGroup?.leave()
                 
                 // if not successful and an error
                 if !success, let error = error  {
@@ -83,12 +89,23 @@ class UsageStatsHandler {
             
             task?.resume()
             
+            _ = dispatchGroup?.wait(timeout: DispatchTime.now() + 5)
+
         } catch let error as NetworkServiceError {
             self.logNetworkServiceError(error, forUsageStatsType: usageStatsType)
             self.clearPendingUsageStats()
         } catch {
             self.clearPendingUsageStats()
             return
+        }
+    }
+    
+    var dispatchGroupForUsageStatsType: ((UsageStatsType) -> DispatchGroup?) = { usageStatsType in
+        switch usageStatsType {
+        case .error:
+            return DispatchGroup()
+        default:
+            return nil
         }
     }
     
