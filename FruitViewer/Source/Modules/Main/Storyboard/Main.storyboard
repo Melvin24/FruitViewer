@@ -38,17 +38,17 @@
                     </view>
                     <connections>
                         <outlet property="bbcLogo" destination="Z07-7T-maS" id="o0b-kE-rZ2"/>
-                        <segue destination="2r3-vX-jGF" kind="presentation" identifier="MainToPhotoViewerViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Q7i-eq-DSD"/>
+                        <segue destination="2r3-vX-jGF" kind="presentation" identifier="MainToFruitListViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Q7i-eq-DSD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMc-1j-9V7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-225" y="80"/>
         </scene>
-        <!--PhotoViewer-->
+        <!--FruitList-->
         <scene sceneID="DKm-HX-Mb6">
             <objects>
-                <viewControllerPlaceholder storyboardName="PhotoViewer" id="2r3-vX-jGF" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="FruitList" id="2r3-vX-jGF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMP-Ta-Pne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="545" y="79"/>

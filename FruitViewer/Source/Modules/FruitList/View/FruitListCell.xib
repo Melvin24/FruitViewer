@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FruitListCellIdentifier" id="Jik-ND-9h8" customClass="FruitListCell" customModule="FruitViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="247"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="247"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exg-Wm-dkx">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="247"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="IQm-OE-zI9">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="247"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IQm-OE-zI9" secondAttribute="bottom" id="9Zg-mK-ICE"/>
+                            <constraint firstItem="IQm-OE-zI9" firstAttribute="leading" secondItem="exg-Wm-dkx" secondAttribute="leading" id="QAW-RP-Y3n"/>
+                            <constraint firstItem="IQm-OE-zI9" firstAttribute="top" secondItem="exg-Wm-dkx" secondAttribute="top" id="X16-HX-MC3"/>
+                            <constraint firstAttribute="trailing" secondItem="IQm-OE-zI9" secondAttribute="trailing" id="m9X-8J-VMZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="exg-Wm-dkx" firstAttribute="top" secondItem="Jik-ND-9h8" secondAttribute="top" id="4U4-K6-G6t"/>
+                <constraint firstAttribute="bottom" secondItem="exg-Wm-dkx" secondAttribute="bottom" id="77d-UL-oCV"/>
+                <constraint firstAttribute="trailing" secondItem="exg-Wm-dkx" secondAttribute="trailing" id="l8F-in-wed"/>
+                <constraint firstItem="exg-Wm-dkx" firstAttribute="leading" secondItem="Jik-ND-9h8" secondAttribute="leading" id="z2h-D6-3RU"/>
+            </constraints>
+            <size key="customSize" width="343" height="247"/>
+            <connections>
+                <outlet property="imageView" destination="IQm-OE-zI9" id="n9h-Fp-pXM"/>
+            </connections>
+            <point key="canvasLocation" x="2.5" y="-80.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="no_image" width="816" height="808"/>
+    </resources>
+</document>

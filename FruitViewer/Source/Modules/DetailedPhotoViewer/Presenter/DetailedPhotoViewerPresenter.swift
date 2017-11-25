@@ -12,6 +12,9 @@ class DetailedPhotoViewerPresenter: Presenter {
     /// Image to display
     var image: UIImage
     
+    func loadIfRequired() {
+    }
+    
     /// Init with an image to display.
     ///
     /// - Parameter image: Image to display.

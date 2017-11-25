@@ -15,16 +15,20 @@ class MainPresenter: Presenter {
             return
         }
         
-        viewController.performSegue(withIdentifier: MainViewController.Segue.mainToPhotoViewer.rawValue, sender: viewController)
+        viewController.performSegue(withIdentifier: MainViewController.Segue.mainToFruitList.rawValue, sender: viewController)
         
+    }
+    
+    /// Call this method to load any required data.
+    func loadIfRequired() {
     }
     
     /// Call this method to prepare a view controller for navigation
     ///
-    /// - Parameter viewController: PhotoViewerViewController
+    /// - Parameter viewController: FruitListViewController
     func preparePhotoViewerViewController(_ viewController: UIViewController) {
         
-        let navigationCoordinator = PhotoViewerNavigationCoordinator()
+        let navigationCoordinator = FruitListNavigationCoordinator()
         
         try? navigationCoordinator.prepareForNavigation(source: viewController, destination: viewController, userInfo: nil)
         

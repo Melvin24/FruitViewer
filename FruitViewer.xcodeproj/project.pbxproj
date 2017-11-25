@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1DDF741FC96464000D21B7 /* FruitListNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF621FC96464000D21B7 /* FruitListNavigationCoordinator.swift */; };
+		7A1DDF751FC96464000D21B7 /* FruitListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF641FC96464000D21B7 /* FruitListInteractor.swift */; };
+		7A1DDF761FC96464000D21B7 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF661FC96464000D21B7 /* CollectionViewDataSource.swift */; };
+		7A1DDF771FC96464000D21B7 /* CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF671FC96464000D21B7 /* CollectionViewDelegate.swift */; };
+		7A1DDF781FC96464000D21B7 /* FruitListPresenter+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF691FC96464000D21B7 /* FruitListPresenter+Helper.swift */; };
+		7A1DDF791FC96464000D21B7 /* FruitListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF6A1FC96464000D21B7 /* FruitListPresenter.swift */; };
+		7A1DDF7A1FC96464000D21B7 /* FruitList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DDF6C1FC96464000D21B7 /* FruitList.storyboard */; };
+		7A1DDF7B1FC96464000D21B7 /* FruitListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF6E1FC96464000D21B7 /* FruitListCell.swift */; };
+		7A1DDF7C1FC96464000D21B7 /* FruitListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DDF6F1FC96464000D21B7 /* FruitListCell.xib */; };
+		7A1DDF7D1FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF711FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift */; };
+		7A1DDF7E1FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF721FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift */; };
+		7A1DDF7F1FC96464000D21B7 /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF731FC96464000D21B7 /* FruitListViewController.swift */; };
 		7A8F426F1FC75A3400E57FAC /* FruitViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F426E1FC75A3400E57FAC /* FruitViewerTests.swift */; };
 		7A8F42801FC75AED00E57FAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F427A1FC75AED00E57FAC /* Info.plist */; };
 		7A8F42811FC75AED00E57FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F427C1FC75AED00E57FAC /* AppDelegate.swift */; };
@@ -21,23 +33,11 @@
 		7A8F42DC1FC75BCC00E57FAC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F429A1FC75BCC00E57FAC /* MainPresenter.swift */; };
 		7A8F42DD1FC75BCC00E57FAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F429C1FC75BCC00E57FAC /* Main.storyboard */; };
 		7A8F42DE1FC75BCC00E57FAC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F429E1FC75BCC00E57FAC /* MainViewController.swift */; };
-		7A8F42DF1FC75BCC00E57FAC /* PhotoViewerNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42A11FC75BCC00E57FAC /* PhotoViewerNavigationCoordinator.swift */; };
-		7A8F42E01FC75BCC00E57FAC /* PhotoViewerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42A31FC75BCC00E57FAC /* PhotoViewerInteractor.swift */; };
-		7A8F42E11FC75BCC00E57FAC /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42A51FC75BCC00E57FAC /* CollectionViewDataSource.swift */; };
-		7A8F42E21FC75BCC00E57FAC /* CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42A61FC75BCC00E57FAC /* CollectionViewDelegate.swift */; };
-		7A8F42E31FC75BCC00E57FAC /* PhotoViewerPresenter+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42A81FC75BCC00E57FAC /* PhotoViewerPresenter+Helper.swift */; };
-		7A8F42E41FC75BCC00E57FAC /* PhotoViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42A91FC75BCC00E57FAC /* PhotoViewerPresenter.swift */; };
-		7A8F42E51FC75BCC00E57FAC /* PhotoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F42AB1FC75BCC00E57FAC /* PhotoViewer.storyboard */; };
-		7A8F42E61FC75BCC00E57FAC /* PhotoViewerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42AD1FC75BCC00E57FAC /* PhotoViewerCell.swift */; };
-		7A8F42E71FC75BCC00E57FAC /* PhotoViewerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F42AE1FC75BCC00E57FAC /* PhotoViewerCell.xib */; };
-		7A8F42E81FC75BCC00E57FAC /* PhotoViewerViewController+UIViewControllerPreviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42B01FC75BCC00E57FAC /* PhotoViewerViewController+UIViewControllerPreviewDelegate.swift */; };
-		7A8F42E91FC75BCC00E57FAC /* PhotoViewerViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42B11FC75BCC00E57FAC /* PhotoViewerViewController+PresenterDelegate.swift */; };
-		7A8F42EA1FC75BCC00E57FAC /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42B21FC75BCC00E57FAC /* PhotoViewerViewController.swift */; };
 		7A8F42EB1FC75BCC00E57FAC /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42B51FC75BCC00E57FAC /* Fruit.swift */; };
 		7A8F42EC1FC75BCC00E57FAC /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42B71FC75BCC00E57FAC /* Functions.swift */; };
 		7A8F42ED1FC75BCC00E57FAC /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42B91FC75BCC00E57FAC /* Strings.swift */; };
 		7A8F42EE1FC75BCC00E57FAC /* CoordinatorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42BB1FC75BCC00E57FAC /* CoordinatorHandler.swift */; };
-		7A8F42EF1FC75BCC00E57FAC /* FruitDataNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42BD1FC75BCC00E57FAC /* FruitDataNetworking.swift */; };
+		7A8F42EF1FC75BCC00E57FAC /* FruitDataNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42BD1FC75BCC00E57FAC /* FruitDataNetworkService.swift */; };
 		7A8F42F11FC75BCC00E57FAC /* CanInteractWithPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42C11FC75BCC00E57FAC /* CanInteractWithPresenter.swift */; };
 		7A8F42F21FC75BCC00E57FAC /* CanShowStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42C21FC75BCC00E57FAC /* CanShowStatusView.swift */; };
 		7A8F42F31FC75BCC00E57FAC /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42C31FC75BCC00E57FAC /* Coordinatable.swift */; };
@@ -68,6 +68,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1DDF621FC96464000D21B7 /* FruitListNavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitListNavigationCoordinator.swift; sourceTree = "<group>"; };
+		7A1DDF641FC96464000D21B7 /* FruitListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitListInteractor.swift; sourceTree = "<group>"; };
+		7A1DDF661FC96464000D21B7 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		7A1DDF671FC96464000D21B7 /* CollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegate.swift; sourceTree = "<group>"; };
+		7A1DDF691FC96464000D21B7 /* FruitListPresenter+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FruitListPresenter+Helper.swift"; sourceTree = "<group>"; };
+		7A1DDF6A1FC96464000D21B7 /* FruitListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitListPresenter.swift; sourceTree = "<group>"; };
+		7A1DDF6C1FC96464000D21B7 /* FruitList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FruitList.storyboard; sourceTree = "<group>"; };
+		7A1DDF6E1FC96464000D21B7 /* FruitListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitListCell.swift; sourceTree = "<group>"; };
+		7A1DDF6F1FC96464000D21B7 /* FruitListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FruitListCell.xib; sourceTree = "<group>"; };
+		7A1DDF711FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FruitListViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		7A1DDF721FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FruitListViewController+UIViewControllerPreviewDelegate.swift"; sourceTree = "<group>"; };
+		7A1DDF731FC96464000D21B7 /* FruitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
 		7A8F42561FC75A3400E57FAC /* FruitViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8F426A1FC75A3400E57FAC /* FruitViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8F426E1FC75A3400E57FAC /* FruitViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewerTests.swift; sourceTree = "<group>"; };
@@ -85,23 +97,11 @@
 		7A8F429A1FC75BCC00E57FAC /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		7A8F429C1FC75BCC00E57FAC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7A8F429E1FC75BCC00E57FAC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		7A8F42A11FC75BCC00E57FAC /* PhotoViewerNavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewerNavigationCoordinator.swift; sourceTree = "<group>"; };
-		7A8F42A31FC75BCC00E57FAC /* PhotoViewerInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewerInteractor.swift; sourceTree = "<group>"; };
-		7A8F42A51FC75BCC00E57FAC /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
-		7A8F42A61FC75BCC00E57FAC /* CollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegate.swift; sourceTree = "<group>"; };
-		7A8F42A81FC75BCC00E57FAC /* PhotoViewerPresenter+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoViewerPresenter+Helper.swift"; sourceTree = "<group>"; };
-		7A8F42A91FC75BCC00E57FAC /* PhotoViewerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewerPresenter.swift; sourceTree = "<group>"; };
-		7A8F42AB1FC75BCC00E57FAC /* PhotoViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoViewer.storyboard; sourceTree = "<group>"; };
-		7A8F42AD1FC75BCC00E57FAC /* PhotoViewerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewerCell.swift; sourceTree = "<group>"; };
-		7A8F42AE1FC75BCC00E57FAC /* PhotoViewerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewerCell.xib; sourceTree = "<group>"; };
-		7A8F42B01FC75BCC00E57FAC /* PhotoViewerViewController+UIViewControllerPreviewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoViewerViewController+UIViewControllerPreviewDelegate.swift"; sourceTree = "<group>"; };
-		7A8F42B11FC75BCC00E57FAC /* PhotoViewerViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoViewerViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
-		7A8F42B21FC75BCC00E57FAC /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 		7A8F42B51FC75BCC00E57FAC /* Fruit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		7A8F42B71FC75BCC00E57FAC /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		7A8F42B91FC75BCC00E57FAC /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7A8F42BB1FC75BCC00E57FAC /* CoordinatorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorHandler.swift; sourceTree = "<group>"; };
-		7A8F42BD1FC75BCC00E57FAC /* FruitDataNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDataNetworking.swift; sourceTree = "<group>"; };
+		7A8F42BD1FC75BCC00E57FAC /* FruitDataNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDataNetworkService.swift; sourceTree = "<group>"; };
 		7A8F42C11FC75BCC00E57FAC /* CanInteractWithPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanInteractWithPresenter.swift; sourceTree = "<group>"; };
 		7A8F42C21FC75BCC00E57FAC /* CanShowStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanShowStatusView.swift; sourceTree = "<group>"; };
 		7A8F42C31FC75BCC00E57FAC /* Coordinatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
@@ -139,6 +139,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1DDF601FC96464000D21B7 /* FruitList */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DDF611FC96464000D21B7 /* Coordinator */,
+				7A1DDF631FC96464000D21B7 /* Interactor */,
+				7A1DDF651FC96464000D21B7 /* Model */,
+				7A1DDF681FC96464000D21B7 /* Presenter */,
+				7A1DDF6B1FC96464000D21B7 /* Storyboard */,
+				7A1DDF6D1FC96464000D21B7 /* View */,
+				7A1DDF701FC96464000D21B7 /* ViewController */,
+			);
+			path = FruitList;
+			sourceTree = "<group>";
+		};
+		7A1DDF611FC96464000D21B7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DDF621FC96464000D21B7 /* FruitListNavigationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7A1DDF631FC96464000D21B7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DDF641FC96464000D21B7 /* FruitListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7A1DDF651FC96464000D21B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DDF661FC96464000D21B7 /* CollectionViewDataSource.swift */,
+				7A1DDF671FC96464000D21B7 /* CollectionViewDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A1DDF681FC96464000D21B7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DDF691FC96464000D21B7 /* FruitListPresenter+Helper.swift */,
+				7A1DDF6A1FC96464000D21B7 /* FruitListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7A1DDF6B1FC96464000D21B7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DDF6C1FC96464000D21B7 /* FruitList.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		7A1DDF6D1FC96464000D21B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DDF6E1FC96464000D21B7 /* FruitListCell.swift */,
+				7A1DDF6F1FC96464000D21B7 /* FruitListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A1DDF701FC96464000D21B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7A1DDF711FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift */,
+				7A1DDF721FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift */,
+				7A1DDF731FC96464000D21B7 /* FruitListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		7A8F424D1FC75A3400E57FAC = {
 			isa = PBXGroup;
 			children = (
@@ -207,9 +282,9 @@
 		7A8F428B1FC75BCC00E57FAC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7A1DDF601FC96464000D21B7 /* FruitList */,
 				7A8F428C1FC75BCC00E57FAC /* DetailedPhotoViewer */,
 				7A8F42951FC75BCC00E57FAC /* Main */,
-				7A8F429F1FC75BCC00E57FAC /* PhotoViewer */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -308,81 +383,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		7A8F429F1FC75BCC00E57FAC /* PhotoViewer */ = {
-			isa = PBXGroup;
-			children = (
-				7A8F42A01FC75BCC00E57FAC /* Coordinator */,
-				7A8F42A21FC75BCC00E57FAC /* Interactor */,
-				7A8F42A41FC75BCC00E57FAC /* Model */,
-				7A8F42A71FC75BCC00E57FAC /* Presenter */,
-				7A8F42AA1FC75BCC00E57FAC /* Storyboard */,
-				7A8F42AC1FC75BCC00E57FAC /* View */,
-				7A8F42AF1FC75BCC00E57FAC /* ViewController */,
-			);
-			path = PhotoViewer;
-			sourceTree = "<group>";
-		};
-		7A8F42A01FC75BCC00E57FAC /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				7A8F42A11FC75BCC00E57FAC /* PhotoViewerNavigationCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		7A8F42A21FC75BCC00E57FAC /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				7A8F42A31FC75BCC00E57FAC /* PhotoViewerInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		7A8F42A41FC75BCC00E57FAC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7A8F42A51FC75BCC00E57FAC /* CollectionViewDataSource.swift */,
-				7A8F42A61FC75BCC00E57FAC /* CollectionViewDelegate.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7A8F42A71FC75BCC00E57FAC /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				7A8F42A81FC75BCC00E57FAC /* PhotoViewerPresenter+Helper.swift */,
-				7A8F42A91FC75BCC00E57FAC /* PhotoViewerPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		7A8F42AA1FC75BCC00E57FAC /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				7A8F42AB1FC75BCC00E57FAC /* PhotoViewer.storyboard */,
-			);
-			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		7A8F42AC1FC75BCC00E57FAC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7A8F42AD1FC75BCC00E57FAC /* PhotoViewerCell.swift */,
-				7A8F42AE1FC75BCC00E57FAC /* PhotoViewerCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7A8F42AF1FC75BCC00E57FAC /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7A8F42B01FC75BCC00E57FAC /* PhotoViewerViewController+UIViewControllerPreviewDelegate.swift */,
-				7A8F42B11FC75BCC00E57FAC /* PhotoViewerViewController+PresenterDelegate.swift */,
-				7A8F42B21FC75BCC00E57FAC /* PhotoViewerViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		7A8F42B31FC75BCC00E57FAC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,7 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8F43101FC76B8600E57FAC /* Result.swift */,
-				7A8F42BD1FC75BCC00E57FAC /* FruitDataNetworking.swift */,
+				7A8F42BD1FC75BCC00E57FAC /* FruitDataNetworkService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -591,11 +591,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A8F42E71FC75BCC00E57FAC /* PhotoViewerCell.xib in Resources */,
-				7A8F42E51FC75BCC00E57FAC /* PhotoViewer.storyboard in Resources */,
 				7A8F42831FC75AED00E57FAC /* LaunchScreen.storyboard in Resources */,
 				7A8F42861FC75B3E00E57FAC /* Localizable.strings in Resources */,
 				7A8F42D91FC75BCC00E57FAC /* DetailedPhotoViewer.storyboard in Resources */,
+				7A1DDF7A1FC96464000D21B7 /* FruitList.storyboard in Resources */,
+				7A1DDF7C1FC96464000D21B7 /* FruitListCell.xib in Resources */,
 				7A8F42DD1FC75BCC00E57FAC /* Main.storyboard in Resources */,
 				7A8F42FA1FC75BCC00E57FAC /* ErrorView.xib in Resources */,
 				7A8F42821FC75AED00E57FAC /* Assets.xcassets in Resources */,
@@ -618,42 +618,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1DDF7F1FC96464000D21B7 /* FruitListViewController.swift in Sources */,
 				7A8F42F71FC75BCC00E57FAC /* Reuseable.swift in Sources */,
 				7A8F42EE1FC75BCC00E57FAC /* CoordinatorHandler.swift in Sources */,
-				7A8F42E01FC75BCC00E57FAC /* PhotoViewerInteractor.swift in Sources */,
-				7A8F42E31FC75BCC00E57FAC /* PhotoViewerPresenter+Helper.swift in Sources */,
+				7A1DDF771FC96464000D21B7 /* CollectionViewDelegate.swift in Sources */,
+				7A1DDF781FC96464000D21B7 /* FruitListPresenter+Helper.swift in Sources */,
 				7A8F42ED1FC75BCC00E57FAC /* Strings.swift in Sources */,
 				7A8F42F21FC75BCC00E57FAC /* CanShowStatusView.swift in Sources */,
-				7A8F42E61FC75BCC00E57FAC /* PhotoViewerCell.swift in Sources */,
+				7A1DDF7B1FC96464000D21B7 /* FruitListCell.swift in Sources */,
 				7A8F42DE1FC75BCC00E57FAC /* MainViewController.swift in Sources */,
 				7A8F42F31FC75BCC00E57FAC /* Coordinatable.swift in Sources */,
 				7A8F43111FC76B8600E57FAC /* Result.swift in Sources */,
-				7A8F42DF1FC75BCC00E57FAC /* PhotoViewerNavigationCoordinator.swift in Sources */,
-				7A8F42EA1FC75BCC00E57FAC /* PhotoViewerViewController.swift in Sources */,
-				7A8F42E91FC75BCC00E57FAC /* PhotoViewerViewController+PresenterDelegate.swift in Sources */,
+				7A1DDF791FC96464000D21B7 /* FruitListPresenter.swift in Sources */,
 				7A8F42F11FC75BCC00E57FAC /* CanInteractWithPresenter.swift in Sources */,
 				7A8F42FD1FC75BCC00E57FAC /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
 				7A8F42F41FC75BCC00E57FAC /* Interactor.swift in Sources */,
 				7A8F42FB1FC75BCC00E57FAC /* LoadingView.swift in Sources */,
 				7A8F42F61FC75BCC00E57FAC /* PresenterDelegate.swift in Sources */,
 				7A8F42F91FC75BCC00E57FAC /* ErrorView.swift in Sources */,
-				7A8F42E81FC75BCC00E57FAC /* PhotoViewerViewController+UIViewControllerPreviewDelegate.swift in Sources */,
-				7A8F42E41FC75BCC00E57FAC /* PhotoViewerPresenter.swift in Sources */,
-				7A8F42EF1FC75BCC00E57FAC /* FruitDataNetworking.swift in Sources */,
+				7A1DDF7D1FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift in Sources */,
+				7A1DDF751FC96464000D21B7 /* FruitListInteractor.swift in Sources */,
+				7A8F42EF1FC75BCC00E57FAC /* FruitDataNetworkService.swift in Sources */,
 				7A8F42811FC75AED00E57FAC /* AppDelegate.swift in Sources */,
 				7A8F42DC1FC75BCC00E57FAC /* MainPresenter.swift in Sources */,
 				7A8F42EC1FC75BCC00E57FAC /* Functions.swift in Sources */,
 				7A8F42F81FC75BCC00E57FAC /* Task.swift in Sources */,
-				7A8F42E11FC75BCC00E57FAC /* CollectionViewDataSource.swift in Sources */,
 				7A8F42DA1FC75BCC00E57FAC /* DetailedPhotoViewerViewController.swift in Sources */,
 				7A8F42F51FC75BCC00E57FAC /* Presenter.swift in Sources */,
 				7A8F42EB1FC75BCC00E57FAC /* Fruit.swift in Sources */,
+				7A1DDF741FC96464000D21B7 /* FruitListNavigationCoordinator.swift in Sources */,
 				7A8F42DB1FC75BCC00E57FAC /* MainNavigationCoordinator.swift in Sources */,
 				7A8F42D81FC75BCC00E57FAC /* DetailedPhotoViewerPresenter.swift in Sources */,
+				7A1DDF7E1FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift in Sources */,
+				7A1DDF761FC96464000D21B7 /* CollectionViewDataSource.swift in Sources */,
 				7A8F42FE1FC75BCC00E57FAC /* UICollectionView+Register.swift in Sources */,
 				7A8F43001FC75BCC00E57FAC /* UIView+Initialize.swift in Sources */,
 				7A8F42D71FC75BCC00E57FAC /* DetailedPhotoViewerNavigationCoordinator.swift in Sources */,
-				7A8F42E21FC75BCC00E57FAC /* CollectionViewDelegate.swift in Sources */,
 				7A8F42FF1FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

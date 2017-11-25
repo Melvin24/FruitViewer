@@ -12,4 +12,7 @@ protocol Presenter: class {
     /// Associated view controller.
     weak var viewController: viewController? { get set }
     
+    /// Call this method to load any required data.
+    func loadIfRequired()
+    
 }

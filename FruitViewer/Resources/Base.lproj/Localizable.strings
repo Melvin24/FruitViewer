@@ -2,6 +2,19 @@
   Localizable.strings
   FruitViewer
 
-  Created by John, Melvin (Associate Software Developer) on 23/11/2017.
-  Copyright © 2017 John, Melvin (Associate Software Developer). All rights reserved.
 */
+
+/// API bad response.
+"fruit-list-api-bad-response.reason" = "Oops, the app did not understand the API response data.";
+
+/// API did not return any data.
+"fruit-list-api-no-response.reason" = "Oops, the API did not return any data.";
+
+/// Unexpected error.
+"unexpected-error.reason" = "Oops, an unexpected error encountered.";
+
+/// No network connection.
+"no-network-connection.reason" = "Looks like you have no network connection, Please try again.";
+
+/// No Fruits To Show.
+"no-fruits-to-show.reason" = "Oops, did not find any fruits to show you.";

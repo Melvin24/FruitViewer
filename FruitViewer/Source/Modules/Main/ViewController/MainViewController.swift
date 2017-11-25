@@ -36,6 +36,6 @@ extension MainViewController {
     }
     
     enum Segue: String {
-        case mainToPhotoViewer = "MainToPhotoViewerViewController"
+        case mainToFruitList = "MainToFruitListViewController"
     }
 }

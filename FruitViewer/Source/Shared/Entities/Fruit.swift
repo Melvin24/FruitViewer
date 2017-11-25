@@ -60,6 +60,8 @@ struct Fruit: Decodable {
     
     let weight: Double
     
+    let image: UIImage?
+    
     init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: FruitCodingKey.self)
@@ -67,8 +69,33 @@ struct Fruit: Decodable {
         price = try container.decode(Double.self, forKey: .price)
         type = try container.decode(Kind.self, forKey: .type)
         weight = try container.decode(Double.self, forKey: .weight)
+        image = Fruit.image(forFruitKind: type)
 
-        
+    }
+    
+    private static func image(forFruitKind kind: Kind) -> UIImage? {
+        switch kind {
+        case .apple:
+            return UIImage(named: "apple_image")
+        case .banana:
+            return UIImage(named: "banana_image")
+        case .blueberry:
+            return UIImage(named: "blueberries_image")
+        case .kiwi:
+            return UIImage(named: "kiwi_image")
+        case .kumquat:
+            return UIImage(named: "kumquat_image")
+        case .orange:
+            return UIImage(named: "orange_image")
+        case .pear:
+            return UIImage(named: "pear_image")
+        case .pitaya:
+            return UIImage(named: "pitaya_image")
+        case .strawberry:
+            return UIImage(named: "strawberry_image")
+        case .unknown:
+            return nil
+        }
     }
     
 }

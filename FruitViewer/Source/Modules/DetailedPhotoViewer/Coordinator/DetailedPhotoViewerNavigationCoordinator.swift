@@ -8,7 +8,7 @@ class DetailedPhotoViewerNavigationCoordinator: Coordinatable {
     
     func prepareForNavigation<From, To>(source: From, destination: To, userInfo: Any?) throws {
         
-        guard source is PhotoViewerViewController,
+        guard source is FruitListViewController,
               let destination = destination as? DetailedPhotoViewerViewController else {
             throw CoordinateError.unsupported("Coordination isnt supported")
         }
