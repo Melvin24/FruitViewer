@@ -62,6 +62,8 @@ struct Fruit: Decodable {
     
     let image: UIImage?
     
+    let name: String
+    
     init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: FruitCodingKey.self)
@@ -70,7 +72,7 @@ struct Fruit: Decodable {
         type = try container.decode(Kind.self, forKey: .type)
         weight = try container.decode(Double.self, forKey: .weight)
         image = Fruit.image(forFruitKind: type)
-
+        name = try container.decode(String.self, forKey: .type)
     }
     
     private static func image(forFruitKind kind: Kind) -> UIImage? {

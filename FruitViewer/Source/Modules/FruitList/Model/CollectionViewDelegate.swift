@@ -8,8 +8,8 @@ class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionVi
     
     let lineSpacing: CGFloat = 4
     let interItemSpacing: CGFloat = 4
-    let numberOfItemsPerRowPortrait: CGFloat = 3
-    let numberOfItemsPerRowLandscape: CGFloat = 4
+    let numberOfItemsPerRowPortrait: CGFloat = 2
+    let numberOfItemsPerRowLandscape: CGFloat = 3
     let sectionInset = UIEdgeInsets(top: 0, left: 4, bottom: 4, right: 4)
     
     /// Current device, used to check for orientation.
@@ -52,22 +52,20 @@ class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let fruits = viewController.presenter.fruits
+        let fruitViewModels = viewController.presenter.fruitViewModels
         
-        guard indexPath.row < fruits.count else {
+        guard indexPath.row < fruitViewModels.count else {
+            return
+        }
+
+        guard let navigationController = viewController.navigationController,
+              let detailedPhotoViewController = viewController.presenter.detailedPhotoViewerViewController(with: fruitViewModels[indexPath.row]) else {
             return
         }
         
-        guard let image = fruits[indexPath.row].image else {
-            return
-        }
-        
-        guard let detailedPhotoViewController = viewController.presenter.detailedPhotoViewerViewController(with: image) else {
-            return
-        }
-        
-        viewController.presentViewController(detailedPhotoViewController)
-        
+        viewController.pushViewControllerToNavigationController(navigationController)(detailedPhotoViewController, true)
+                
     }
+    
     
 }

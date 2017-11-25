@@ -20,15 +20,14 @@
 		7A1DDF7E1FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF721FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift */; };
 		7A1DDF7F1FC96464000D21B7 /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF731FC96464000D21B7 /* FruitListViewController.swift */; };
 		7A8F426F1FC75A3400E57FAC /* FruitViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F426E1FC75A3400E57FAC /* FruitViewerTests.swift */; };
-		7A8F42801FC75AED00E57FAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F427A1FC75AED00E57FAC /* Info.plist */; };
 		7A8F42811FC75AED00E57FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F427C1FC75AED00E57FAC /* AppDelegate.swift */; };
 		7A8F42821FC75AED00E57FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F427E1FC75AED00E57FAC /* Assets.xcassets */; };
 		7A8F42831FC75AED00E57FAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F427F1FC75AED00E57FAC /* LaunchScreen.storyboard */; };
 		7A8F42861FC75B3E00E57FAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F42881FC75B3E00E57FAC /* Localizable.strings */; };
-		7A8F42D71FC75BCC00E57FAC /* DetailedPhotoViewerNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F428E1FC75BCC00E57FAC /* DetailedPhotoViewerNavigationCoordinator.swift */; };
-		7A8F42D81FC75BCC00E57FAC /* DetailedPhotoViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42901FC75BCC00E57FAC /* DetailedPhotoViewerPresenter.swift */; };
-		7A8F42D91FC75BCC00E57FAC /* DetailedPhotoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F42921FC75BCC00E57FAC /* DetailedPhotoViewer.storyboard */; };
-		7A8F42DA1FC75BCC00E57FAC /* DetailedPhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42941FC75BCC00E57FAC /* DetailedPhotoViewerViewController.swift */; };
+		7A8F42D71FC75BCC00E57FAC /* DetailedViewerNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F428E1FC75BCC00E57FAC /* DetailedViewerNavigationCoordinator.swift */; };
+		7A8F42D81FC75BCC00E57FAC /* DetailedViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42901FC75BCC00E57FAC /* DetailedViewerPresenter.swift */; };
+		7A8F42D91FC75BCC00E57FAC /* DetailedViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F42921FC75BCC00E57FAC /* DetailedViewer.storyboard */; };
+		7A8F42DA1FC75BCC00E57FAC /* DetailedViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42941FC75BCC00E57FAC /* DetailedViewerViewController.swift */; };
 		7A8F42DB1FC75BCC00E57FAC /* MainNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42971FC75BCC00E57FAC /* MainNavigationCoordinator.swift */; };
 		7A8F42DC1FC75BCC00E57FAC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F429A1FC75BCC00E57FAC /* MainPresenter.swift */; };
 		7A8F42DD1FC75BCC00E57FAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F429C1FC75BCC00E57FAC /* Main.storyboard */; };
@@ -55,6 +54,7 @@
 		7A8F42FF1FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42D41FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift */; };
 		7A8F43001FC75BCC00E57FAC /* UIView+Initialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42D61FC75BCC00E57FAC /* UIView+Initialize.swift */; };
 		7A8F43111FC76B8600E57FAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F43101FC76B8600E57FAC /* Result.swift */; };
+		7AD5630E1FC9A46E00215F55 /* FruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5630D1FC9A46E00215F55 /* FruitViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,10 +89,10 @@
 		7A8F427E1FC75AED00E57FAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A8F427F1FC75AED00E57FAC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A8F428A1FC75B5C00E57FAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7A8F428E1FC75BCC00E57FAC /* DetailedPhotoViewerNavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedPhotoViewerNavigationCoordinator.swift; sourceTree = "<group>"; };
-		7A8F42901FC75BCC00E57FAC /* DetailedPhotoViewerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedPhotoViewerPresenter.swift; sourceTree = "<group>"; };
-		7A8F42921FC75BCC00E57FAC /* DetailedPhotoViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedPhotoViewer.storyboard; sourceTree = "<group>"; };
-		7A8F42941FC75BCC00E57FAC /* DetailedPhotoViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedPhotoViewerViewController.swift; sourceTree = "<group>"; };
+		7A8F428E1FC75BCC00E57FAC /* DetailedViewerNavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewerNavigationCoordinator.swift; sourceTree = "<group>"; };
+		7A8F42901FC75BCC00E57FAC /* DetailedViewerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewerPresenter.swift; sourceTree = "<group>"; };
+		7A8F42921FC75BCC00E57FAC /* DetailedViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedViewer.storyboard; sourceTree = "<group>"; };
+		7A8F42941FC75BCC00E57FAC /* DetailedViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewerViewController.swift; sourceTree = "<group>"; };
 		7A8F42971FC75BCC00E57FAC /* MainNavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationCoordinator.swift; sourceTree = "<group>"; };
 		7A8F429A1FC75BCC00E57FAC /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		7A8F429C1FC75BCC00E57FAC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +119,7 @@
 		7A8F42D41FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
 		7A8F42D61FC75BCC00E57FAC /* UIView+Initialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Initialize.swift"; sourceTree = "<group>"; };
 		7A8F43101FC76B8600E57FAC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7AD5630D1FC9A46E00215F55 /* FruitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,13 +284,13 @@
 			isa = PBXGroup;
 			children = (
 				7A1DDF601FC96464000D21B7 /* FruitList */,
-				7A8F428C1FC75BCC00E57FAC /* DetailedPhotoViewer */,
+				7A8F428C1FC75BCC00E57FAC /* DetailedViewer */,
 				7A8F42951FC75BCC00E57FAC /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		7A8F428C1FC75BCC00E57FAC /* DetailedPhotoViewer */ = {
+		7A8F428C1FC75BCC00E57FAC /* DetailedViewer */ = {
 			isa = PBXGroup;
 			children = (
 				7A8F428D1FC75BCC00E57FAC /* Coordinator */,
@@ -297,13 +298,13 @@
 				7A8F42911FC75BCC00E57FAC /* Storyboard */,
 				7A8F42931FC75BCC00E57FAC /* ViewController */,
 			);
-			path = DetailedPhotoViewer;
+			path = DetailedViewer;
 			sourceTree = "<group>";
 		};
 		7A8F428D1FC75BCC00E57FAC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				7A8F428E1FC75BCC00E57FAC /* DetailedPhotoViewerNavigationCoordinator.swift */,
+				7A8F428E1FC75BCC00E57FAC /* DetailedViewerNavigationCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -311,7 +312,7 @@
 		7A8F428F1FC75BCC00E57FAC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				7A8F42901FC75BCC00E57FAC /* DetailedPhotoViewerPresenter.swift */,
+				7A8F42901FC75BCC00E57FAC /* DetailedViewerPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -319,7 +320,7 @@
 		7A8F42911FC75BCC00E57FAC /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				7A8F42921FC75BCC00E57FAC /* DetailedPhotoViewer.storyboard */,
+				7A8F42921FC75BCC00E57FAC /* DetailedViewer.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -327,7 +328,7 @@
 		7A8F42931FC75BCC00E57FAC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7A8F42941FC75BCC00E57FAC /* DetailedPhotoViewerViewController.swift */,
+				7A8F42941FC75BCC00E57FAC /* DetailedViewerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -402,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8F42B51FC75BCC00E57FAC /* Fruit.swift */,
+				7AD5630D1FC9A46E00215F55 /* FruitViewModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -593,13 +595,12 @@
 			files = (
 				7A8F42831FC75AED00E57FAC /* LaunchScreen.storyboard in Resources */,
 				7A8F42861FC75B3E00E57FAC /* Localizable.strings in Resources */,
-				7A8F42D91FC75BCC00E57FAC /* DetailedPhotoViewer.storyboard in Resources */,
+				7A8F42D91FC75BCC00E57FAC /* DetailedViewer.storyboard in Resources */,
 				7A1DDF7A1FC96464000D21B7 /* FruitList.storyboard in Resources */,
 				7A1DDF7C1FC96464000D21B7 /* FruitListCell.xib in Resources */,
 				7A8F42DD1FC75BCC00E57FAC /* Main.storyboard in Resources */,
 				7A8F42FA1FC75BCC00E57FAC /* ErrorView.xib in Resources */,
 				7A8F42821FC75AED00E57FAC /* Assets.xcassets in Resources */,
-				7A8F42801FC75AED00E57FAC /* Info.plist in Resources */,
 				7A8F42FC1FC75BCC00E57FAC /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,17 +644,18 @@
 				7A8F42DC1FC75BCC00E57FAC /* MainPresenter.swift in Sources */,
 				7A8F42EC1FC75BCC00E57FAC /* Functions.swift in Sources */,
 				7A8F42F81FC75BCC00E57FAC /* Task.swift in Sources */,
-				7A8F42DA1FC75BCC00E57FAC /* DetailedPhotoViewerViewController.swift in Sources */,
+				7A8F42DA1FC75BCC00E57FAC /* DetailedViewerViewController.swift in Sources */,
 				7A8F42F51FC75BCC00E57FAC /* Presenter.swift in Sources */,
 				7A8F42EB1FC75BCC00E57FAC /* Fruit.swift in Sources */,
 				7A1DDF741FC96464000D21B7 /* FruitListNavigationCoordinator.swift in Sources */,
 				7A8F42DB1FC75BCC00E57FAC /* MainNavigationCoordinator.swift in Sources */,
-				7A8F42D81FC75BCC00E57FAC /* DetailedPhotoViewerPresenter.swift in Sources */,
+				7A8F42D81FC75BCC00E57FAC /* DetailedViewerPresenter.swift in Sources */,
 				7A1DDF7E1FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift in Sources */,
 				7A1DDF761FC96464000D21B7 /* CollectionViewDataSource.swift in Sources */,
+				7AD5630E1FC9A46E00215F55 /* FruitViewModel.swift in Sources */,
 				7A8F42FE1FC75BCC00E57FAC /* UICollectionView+Register.swift in Sources */,
 				7A8F43001FC75BCC00E57FAC /* UIView+Initialize.swift in Sources */,
-				7A8F42D71FC75BCC00E57FAC /* DetailedPhotoViewerNavigationCoordinator.swift in Sources */,
+				7A8F42D71FC75BCC00E57FAC /* DetailedViewerNavigationCoordinator.swift in Sources */,
 				7A8F42FF1FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

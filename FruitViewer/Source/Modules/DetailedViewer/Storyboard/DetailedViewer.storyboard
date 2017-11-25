@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bsh-Hc-aL8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detailed Viewer View Controller-->
+        <scene sceneID="mGK-cB-Dnh">
+            <objects>
+                <viewController id="bsh-Hc-aL8" customClass="DetailedViewerViewController" customModule="FruitViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LxL-M4-fST"/>
+                        <viewControllerLayoutGuide type="bottom" id="5or-fP-xPc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mo1-rK-anv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qdb-BE-hTE">
+                                <rect key="frame" x="5" y="20" width="365" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-Ag-FXL">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="318.5"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZA6-fl-ldn">
+                                        <rect key="frame" x="0.0" y="323.5" width="365" height="323.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pLC-na-SZh">
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="51"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: £0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMF-Od-BmS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="365" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight: 0.00 KG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3et-qn-Y5d">
+                                                        <rect key="frame" x="0.0" y="30.5" width="365" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pLC-na-SZh" firstAttribute="leading" secondItem="ZA6-fl-ldn" secondAttribute="leading" id="EI8-a1-nLA"/>
+                                            <constraint firstAttribute="trailing" secondItem="pLC-na-SZh" secondAttribute="trailing" id="Jrj-v4-7IR"/>
+                                            <constraint firstItem="pLC-na-SZh" firstAttribute="top" secondItem="ZA6-fl-ldn" secondAttribute="top" id="t8Z-yK-859"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZA6-fl-ldn" firstAttribute="height" secondItem="Qdb-BE-hTE" secondAttribute="height" multiplier="0.5" id="bgA-La-RoA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qdb-BE-hTE" firstAttribute="leading" secondItem="Mo1-rK-anv" secondAttribute="leading" constant="5" id="0Bk-iP-99q"/>
+                            <constraint firstItem="Qdb-BE-hTE" firstAttribute="top" secondItem="LxL-M4-fST" secondAttribute="bottom" id="4Br-Ob-39x"/>
+                            <constraint firstItem="5or-fP-xPc" firstAttribute="top" secondItem="Qdb-BE-hTE" secondAttribute="bottom" id="WqM-1J-VMO"/>
+                            <constraint firstAttribute="trailing" secondItem="Qdb-BE-hTE" secondAttribute="trailing" constant="5" id="aNV-zn-XE9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="tKP-Ag-FXL" id="Wsy-t4-XcW"/>
+                        <outlet property="informationContainerView" destination="ZA6-fl-ldn" id="adO-Dv-Lkn"/>
+                        <outlet property="priceLabel" destination="UMF-Od-BmS" id="GeR-Zr-lSI"/>
+                        <outlet property="weightLabel" destination="3et-qn-Y5d" id="JHE-4Z-MK1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofh-OD-GLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194.40000000000001" y="88.605697151424295"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="no_image" width="816" height="808"/>
+    </resources>
+</document>

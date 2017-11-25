@@ -13,14 +13,14 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewController.presenter.fruits.count
+        return viewController.presenter.fruitViewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(type: FruitListCell.self, forIndexPath: indexPath)
         
-        guard let image = viewController.presenter.fruits[indexPath.row].image else {
+        guard let image = viewController.presenter.fruitViewModels[indexPath.row].fruitImage else {
             return cell
         }
 

@@ -2,7 +2,7 @@
 //  FruitListNavigationCoordinator.swift
 //  FruitViewer
 
-import Foundation
+import UIKit
 
 class FruitListNavigationCoordinator: Coordinatable {
     
@@ -10,7 +10,8 @@ class FruitListNavigationCoordinator: Coordinatable {
     
     func prepareForNavigation<From, To>(source: From, destination: To, userInfo: Any?) throws {
         
-        guard let destination = destination as? FruitListViewController else {
+        guard let navigationController = destination as? UINavigationController,
+            let fruitListViewController = navigationController.topViewController as? FruitListViewController else {
             throw CoordinateError.unsupported("Coordination isnt supported")
         }
         
@@ -18,8 +19,8 @@ class FruitListNavigationCoordinator: Coordinatable {
         
         let interactor = FruitListInteractor(withRequest: interactorRequest)
         
-        let presenter = FruitListPresenter(viewController: destination, interactor: interactor)
+        let presenter = FruitListPresenter(viewController: fruitListViewController, interactor: interactor)
         
-        destination.presenter = presenter
+        fruitListViewController.presenter = presenter
     }
 }

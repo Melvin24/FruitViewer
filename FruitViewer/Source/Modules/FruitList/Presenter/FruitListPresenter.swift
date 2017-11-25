@@ -17,7 +17,7 @@ class FruitListPresenter: Presenter {
         self.interactor = interactor
     }
     
-    var fruits: [Fruit] = []
+    var fruitViewModels: [FruitViewModel] = []
 
     /// Call this method to load any required data.
     func loadIfRequired() {
@@ -29,7 +29,9 @@ class FruitListPresenter: Presenter {
             
             switch result {
             case .success(let fruits):
-                self?.fruits = fruits
+                self?.fruitViewModels = fruits.map {
+                    return FruitViewModel(fruit: $0)
+                }
                 self?.viewController?.presenterDidUpdateContent()
             case .failure(let error):
                 self?.viewController?.presenterDidFail(withError: error)

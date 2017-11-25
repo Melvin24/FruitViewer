@@ -17,7 +17,7 @@ extension FruitListViewController: PresenterDelegate {
     func presenterDidUpdateContent() {
         
         var statusView: UIView?
-        if presenter.fruits.isEmpty, !refreshControl.isRefreshing {
+        if presenter.fruitViewModels.isEmpty, !refreshControl.isRefreshing {
             statusView = presenter.noDataView()
         }
         

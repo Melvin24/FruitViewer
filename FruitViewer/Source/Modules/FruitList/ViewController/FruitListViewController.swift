@@ -25,6 +25,8 @@ class FruitListViewController: UIViewController, CanInteractWithPresenter, CanSh
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Fruit Viewer"
+        
         setupRefreshController(forCollectionView: collectionView)
         
         statusContainerView = collectionViewContainerView
@@ -92,7 +94,6 @@ class FruitListViewController: UIViewController, CanInteractWithPresenter, CanSh
         }, completion: completion)
     }
     
-    func presentViewController(_ viewController: UIViewController) {
-        present(viewController, animated: true, completion: nil)
-    }
+    var pushViewControllerToNavigationController = UINavigationController.pushViewController
+
 }

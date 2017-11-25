@@ -9,7 +9,16 @@ extension FruitListViewController: UIViewControllerPreviewingDelegate {
     
     @available(iOS 9.0, *)
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        presentViewController(viewControllerToCommit)
+        
+        guard let navigationController = navigationController,
+              let detailedViewerViewController = viewControllerToCommit as? DetailedViewerViewController else {
+            return
+        }
+        
+        detailedViewerViewController.toggleinformationContainerView(false)
+        
+        pushViewControllerToNavigationController(navigationController)(viewControllerToCommit, true)
+
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
@@ -21,17 +30,13 @@ extension FruitListViewController: UIViewControllerPreviewingDelegate {
             return nil
         }
         
-        let fruits = presenter.fruits
+        let fruitViewModels = presenter.fruitViewModels
 
-        guard indexPath.row < fruits.count else {
+        guard indexPath.row < fruitViewModels.count else {
             return nil
         }
 
-        guard let image = fruits[indexPath.row].image else {
-            return nil
-        }
-        
-        guard let detailedPhotoViewController = presenter.detailedPhotoViewerViewController(with: image) else {
+        guard let detailedPhotoViewController = presenter.detailedPhotoViewerViewController(with: fruitViewModels[indexPath.row], shouldHideDetails: true) else {
             return nil
         }
 

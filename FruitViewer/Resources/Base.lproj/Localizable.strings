@@ -18,3 +18,16 @@
 
 /// No Fruits To Show.
 "no-fruits-to-show.reason" = "Oops, did not find any fruits to show you.";
+
+/// Fruit Price Title.
+"fruit-price.title" = "Price: £{{price}}";
+
+/// Fruit Price Invalid Title.
+"fruit-price_invalid.title" = "Price: No price to show.";
+
+/// Fruit Weight Title.
+"fruit-weight.title" = "Weight: {{weight}} KG";
+
+/// Fruit Weight Invalid Title.
+"fruit-weight_invalid.title" = "Weight: No weight to show.";
+

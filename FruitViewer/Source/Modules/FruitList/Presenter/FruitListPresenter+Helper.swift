@@ -6,17 +6,21 @@ import UIKit
 
 extension FruitListPresenter {
     
-    /// Call this method to obtain a Detailed Photo viewer for a given image.
+    /// Call this method to obtain a Detailed viewer for a given FruitViewModel Object.
     ///
-    /// - Parameter image: Image to show.
+    /// - Parameter FruitViewModel: FruitViewModel Object to use.
     /// - Returns: DetailedPhotoViewerViewController.
-    func detailedPhotoViewerViewController(with image: UIImage) -> UIViewController? {
+    func detailedPhotoViewerViewController(with fruitViewModel: FruitViewModel, shouldHideDetails: Bool = false) -> UIViewController? {
 
-        let coordinator = DetailedPhotoViewerNavigationCoordinator()
+        let coordinator: Coordinatable = DetailedViewerNavigationCoordinator()
 
-        let destination = UIStoryboard.instantiateViewControllerFromStoryboard(withName: DetailedPhotoViewerViewController.Storyboard.name)
+        let destination = UIStoryboard.instantiateViewControllerFromStoryboard(withName: DetailedViewerViewController.Storyboard.name)
 
-        try? coordinator.prepareForNavigation(source: self.viewController, destination: destination, userInfo: image)
+        let userInfo = (fruitViewModel: fruitViewModel, shouldHideDetails: shouldHideDetails)
+        
+        try? coordinator.prepareForNavigation(source: self.viewController,
+                                         destination: destination,
+                                            userInfo: userInfo)
 
         return destination
     }
