@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.933382"
+            timestampString = "533343123.901591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "clearPendingUsageStats()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.934255"
+            timestampString = "533343123.901951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.93464"
+            timestampString = "533343123.902024"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.935005"
+            timestampString = "533343123.902086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.935351"
+            timestampString = "533343123.902147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.935696"
+            timestampString = "533343123.902207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.936033"
+            timestampString = "533343123.902265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "updateUserStats(usingUsageStatsType:)"
             landmarkType = "7">
             <Locations>
@@ -122,12 +122,12 @@
                   moduleName = "FruitViewer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mjo39/Desktop/FruitViewer/FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-                  timestampString = "533337362.092958"
+                  timestampString = "533342189.282822"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "1879">
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "1764">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -137,12 +137,12 @@
                   moduleName = "FruitViewer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mjo39/Desktop/FruitViewer/FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-                  timestampString = "533337362.095605"
+                  timestampString = "533342189.284427"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "134">
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "124">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.936371"
+            timestampString = "533343123.902323"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
-            timestampString = "533337361.936719"
+            timestampString = "533343123.902382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "updateUserStats(usingUsageStatsType:)"
             landmarkType = "7">
          </BreakpointContent>

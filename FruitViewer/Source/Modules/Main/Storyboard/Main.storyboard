@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,22 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbc_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z07-7T-maS">
-                                <rect key="frame" x="93.5" y="302.5" width="187.5" height="61.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Z07-7T-maS" secondAttribute="height" multiplier="3.04" id="f7r-iV-UR6"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbc_logo" translatesAutoresizingMaskIntoConstraints="NO" id="E6p-Zc-PG4">
+                                <rect key="frame" x="94" y="20" width="187.5" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Z07-7T-maS" firstAttribute="width" secondItem="fku-Un-8Vp" secondAttribute="width" multiplier="0.5" id="2d9-mq-8UN"/>
-                            <constraint firstItem="Z07-7T-maS" firstAttribute="centerX" secondItem="fku-Un-8Vp" secondAttribute="centerX" id="XI2-CN-748"/>
-                            <constraint firstItem="Z07-7T-maS" firstAttribute="centerY" secondItem="fku-Un-8Vp" secondAttribute="centerY" id="nRf-JD-NB6"/>
+                            <constraint firstItem="E6p-Zc-PG4" firstAttribute="width" secondItem="fku-Un-8Vp" secondAttribute="width" multiplier="0.5" id="R4d-wo-Xdn"/>
+                            <constraint firstItem="E6p-Zc-PG4" firstAttribute="centerX" secondItem="fku-Un-8Vp" secondAttribute="centerX" id="SIT-B6-aXM"/>
+                            <constraint firstItem="BPe-oV-xkJ" firstAttribute="top" secondItem="E6p-Zc-PG4" secondAttribute="bottom" id="cty-DX-dqn"/>
+                            <constraint firstItem="E6p-Zc-PG4" firstAttribute="top" secondItem="ptK-ds-e3c" secondAttribute="bottom" id="tiZ-Mu-djo"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bbcLogo" destination="Z07-7T-maS" id="o0b-kE-rZ2"/>
+                        <outlet property="bbcLogo" destination="E6p-Zc-PG4" id="rGV-RZ-B37"/>
                         <segue destination="2r3-vX-jGF" kind="presentation" identifier="MainToFruitListViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Q7i-eq-DSD"/>
                     </connections>
                 </viewController>
@@ -55,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bbc_logo" width="3425" height="1125"/>
+        <image name="bbc_logo" width="1704" height="1222"/>
     </resources>
 </document>
