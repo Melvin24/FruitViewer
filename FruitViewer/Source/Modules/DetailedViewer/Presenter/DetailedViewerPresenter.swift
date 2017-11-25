@@ -26,3 +26,7 @@ class DetailedViewerPresenter: Presenter {
     }
     
 }
+
+extension DetailedViewerPresenter: CanNotifyDisplayRenderDuration {
+    
+}

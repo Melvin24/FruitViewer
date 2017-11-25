@@ -24,20 +24,37 @@ class FruitListPresenter: Presenter {
         
         self.viewController?.presenterWillUpdateContent()
 
+        let fetchStart = Date()
+
         // Asking the interactor to fetch data for search term. 
         interactor.fetchData { [weak self] result in
             
+            guard let strongSelf = self else {
+                return
+            }
+            
+            let fetchEnd = Date()
+            
+            strongSelf.notifyLoadUsageStatsForRequestTime(strongSelf, fetchStart, fetchEnd)
+            
             switch result {
             case .success(let fruits):
-                self?.fruitViewModels = fruits.map {
+                strongSelf.fruitViewModels = fruits.map {
                     return FruitViewModel(fruit: $0)
                 }
-                self?.viewController?.presenterDidUpdateContent()
+                strongSelf.viewController?.presenterDidUpdateContent()
             case .failure(let error):
-                self?.viewController?.presenterDidFail(withError: error)
+                strongSelf.viewController?.presenterDidFail(withError: error)
             }
         }
 
     }
     
+    var notifyLoadUsageStatsForRequestTime: ((CanNotifyNetworkRequestDuration, Date, Date) -> Void) = { notifier, startDate, endDate in
+        notifier.notifyNetworkRequestDuration(startDate: startDate, endDate: endDate)
+    }
+    
+}
+
+extension FruitListPresenter: CanNotifyNetworkRequestDuration {
 }

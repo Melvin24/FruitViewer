@@ -15,6 +15,10 @@ class DetailedViewerViewController: UIViewController, CanInteractWithPresenter {
     
     @IBOutlet var weightLabel: UILabel!
     
+    var userInitiatedDate: Date!
+    
+    var finishedDisplayRenderDate: Date!
+    
     /// Associated presenter.
     var presenter: DetailedViewerPresenter!
     
@@ -34,10 +38,26 @@ class DetailedViewerViewController: UIViewController, CanInteractWithPresenter {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        finishedDisplayRenderDate = Date()
+        
+        notifyDisplayRenderDuration(presenter, userInitiatedDate, finishedDisplayRenderDate)
+    }
+    
     func toggleinformationContainerView(_ isHidden: Bool) {
         informationContainerView.isHidden = isHidden
     }
+    
+    var notifyDisplayRenderDuration: ((CanNotifyDisplayRenderDuration, Date, Date) -> Void) = { notifier, startDate, endDate in
+        notifier.notifyDisplayRenderDuration(startDate: startDate, endDate: endDate)
+    }
 
+}
+
+extension DetailedViewerViewController: SupportDisaplyUsageStatsUpdate {
+    
 }
 
 extension DetailedViewerViewController {

@@ -10,11 +10,11 @@ extension FruitListPresenter {
     ///
     /// - Parameter FruitViewModel: FruitViewModel Object to use.
     /// - Returns: DetailedPhotoViewerViewController.
-    func detailedPhotoViewerViewController(with fruitViewModel: FruitViewModel, shouldHideDetails: Bool = false) -> UIViewController? {
+    func detailedPhotoViewerViewController(with fruitViewModel: FruitViewModel, shouldHideDetails: Bool = false) -> DetailedViewerViewController? {
 
         let coordinator: Coordinatable = DetailedViewerNavigationCoordinator()
 
-        let destination = UIStoryboard.instantiateViewControllerFromStoryboard(withName: DetailedViewerViewController.Storyboard.name)
+        let destination = UIStoryboard.instantiateViewControllerFromStoryboard(withName: DetailedViewerViewController.Storyboard.name) as? DetailedViewerViewController
 
         let userInfo = (fruitViewModel: fruitViewModel, shouldHideDetails: shouldHideDetails)
         
@@ -53,21 +53,13 @@ extension FruitListPresenter {
         
         errorView.onRetryButtonSelect = self.viewController?.reloadFruitList
         
-        guard let fruitDataNetworkError = error as? FruitDataNetworkService.FruitDataNetworkingError else {
-            errorView.label.text = Strings.unexpectedError
-            return errorView
-        }
-
         let errorLabel: String
 
-        switch fruitDataNetworkError {
-        case .noConnection:
-            errorLabel = Strings.noNetworkConnection
-        case .noData:
-            errorLabel = Strings.noDataFromAPI
-        case .unableToParseData:
-            errorLabel = Strings.badResponseFromAPI
-        case .unableToBuildURL:
+        if let fruitDataNetworkError = error as? FruitDataNetworkService.FruitDataNetworkingError {
+            errorLabel = errorMessage(forError: fruitDataNetworkError)
+        } else if let networkError = error as? NetworkServiceError {
+            errorLabel = errorMessage(forError: networkError)
+        } else {
             errorLabel = Strings.unexpectedError
         }
 
@@ -75,6 +67,27 @@ extension FruitListPresenter {
 
         return errorView
 
+    }
+    
+    func errorMessage(forError error: FruitDataNetworkService.FruitDataNetworkingError) -> String {
+        
+        switch error {
+        case .noData:
+            return Strings.noDataFromAPI
+        case .unableToParseData:
+            return Strings.badResponseFromAPI
+        }
+    }
+    
+    func errorMessage(forError error: NetworkServiceError) -> String {
+        
+        switch error {
+        case .noConnection:
+            return Strings.noNetworkConnection
+        case .couldNotBuildURL, .HTTPError:
+            return Strings.unexpectedError
+
+        }
     }
 
     private func errorStatusView() -> ErrorView {

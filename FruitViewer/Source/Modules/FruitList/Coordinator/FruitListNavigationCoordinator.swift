@@ -6,7 +6,7 @@ import UIKit
 
 class FruitListNavigationCoordinator: Coordinatable {
     
-    lazy var networkService: FruitDataNetworkService = FruitDataNetworkService()
+    lazy var networkService = FruitDataNetworkService()
     
     func prepareForNavigation<From, To>(source: From, destination: To, userInfo: Any?) throws {
         

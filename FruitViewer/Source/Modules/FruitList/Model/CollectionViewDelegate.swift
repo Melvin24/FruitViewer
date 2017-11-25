@@ -52,16 +52,21 @@ class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let userInitiatedDate = Date()
+        
         let fruitViewModels = viewController.presenter.fruitViewModels
         
         guard indexPath.row < fruitViewModels.count else {
             return
         }
 
+        
         guard let navigationController = viewController.navigationController,
               let detailedPhotoViewController = viewController.presenter.detailedPhotoViewerViewController(with: fruitViewModels[indexPath.row]) else {
             return
         }
+        
+        detailedPhotoViewController.userInitiatedDate = userInitiatedDate
         
         viewController.pushViewControllerToNavigationController(navigationController)(detailedPhotoViewController, true)
                 

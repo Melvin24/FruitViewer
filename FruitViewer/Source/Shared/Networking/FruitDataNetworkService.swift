@@ -9,17 +9,12 @@ class FruitDataNetworkService {
     /// Network Error
     enum FruitDataNetworkingError: Error {
         
-        /// Unable to buld URL Error
-        case unableToBuildURL
-        
         /// No Data from Fruit Data API.
         case noData
         
         /// Failed to Parse Fruit API Response.
         case unableToParseData
         
-        /// No Network Connection.
-        case noConnection
     }
         
     public typealias Completion = (Result<[Fruit]>) -> Void
@@ -32,16 +27,15 @@ class FruitDataNetworkService {
         return { completion in
             
             let URLPath = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json"
-            let requestURL = URL(string: URLPath)
             
-            guard let fruitAPIURL = requestURL else {
-                throw FruitDataNetworkingError.unableToBuildURL
+            guard let fruitAPIURL = URL(string: URLPath) else {
+                throw NetworkServiceError.couldNotBuildURL(URLPath: URLPath)
             }
             
             return session.dataTask(with: fruitAPIURL) { data, response, error in
                 
                 guard error?._code != NSURLErrorTimedOut && error?._code != NSURLErrorNotConnectedToInternet else {
-                    completion(.failure(FruitDataNetworkingError.noConnection))
+                    completion(.failure(NetworkServiceError.noConnection))
                     return
                 }
                 

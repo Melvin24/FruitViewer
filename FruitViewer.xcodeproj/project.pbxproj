@@ -19,6 +19,11 @@
 		7A1DDF7D1FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF711FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift */; };
 		7A1DDF7E1FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF721FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift */; };
 		7A1DDF7F1FC96464000D21B7 /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DDF731FC96464000D21B7 /* FruitListViewController.swift */; };
+		7A30F02A1FC9E722003423A9 /* UsageStatsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30F0291FC9E721003423A9 /* UsageStatsHandler.swift */; };
+		7A30F02C1FC9E732003423A9 /* UsageStatsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30F02B1FC9E732003423A9 /* UsageStatsType.swift */; };
+		7A30F0301FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30F02F1FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift */; };
+		7A30F0321FC9F474003423A9 /* CanNotifyDisplayRenderDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30F0311FC9F474003423A9 /* CanNotifyDisplayRenderDuration.swift */; };
+		7A30F0341FC9F4B7003423A9 /* CanNotifyNetworkRequestDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30F0331FC9F4B7003423A9 /* CanNotifyNetworkRequestDuration.swift */; };
 		7A8F426F1FC75A3400E57FAC /* FruitViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F426E1FC75A3400E57FAC /* FruitViewerTests.swift */; };
 		7A8F42811FC75AED00E57FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F427C1FC75AED00E57FAC /* AppDelegate.swift */; };
 		7A8F42821FC75AED00E57FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F427E1FC75AED00E57FAC /* Assets.xcassets */; };
@@ -54,7 +59,12 @@
 		7A8F42FF1FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42D41FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift */; };
 		7A8F43001FC75BCC00E57FAC /* UIView+Initialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42D61FC75BCC00E57FAC /* UIView+Initialize.swift */; };
 		7A8F43111FC76B8600E57FAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F43101FC76B8600E57FAC /* Result.swift */; };
+		7AACD1571FCA01B900097C0C /* FruitViewerExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1561FCA01B900097C0C /* FruitViewerExceptionHandler.m */; };
+		7AACD1591FCA074700097C0C /* UsageStatsErrorNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1581FCA074700097C0C /* UsageStatsErrorNotifier.swift */; };
 		7AD5630E1FC9A46E00215F55 /* FruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5630D1FC9A46E00215F55 /* FruitViewModel.swift */; };
+		7AD563121FC9C2EA00215F55 /* UsageStatsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563111FC9C2EA00215F55 /* UsageStatsNetworkService.swift */; };
+		7AD563141FC9C6CA00215F55 /* NetworkServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563131FC9C6CA00215F55 /* NetworkServiceError.swift */; };
+		7AD563181FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563171FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +90,11 @@
 		7A1DDF711FC96464000D21B7 /* FruitListViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FruitListViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		7A1DDF721FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FruitListViewController+UIViewControllerPreviewDelegate.swift"; sourceTree = "<group>"; };
 		7A1DDF731FC96464000D21B7 /* FruitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
+		7A30F0291FC9E721003423A9 /* UsageStatsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageStatsHandler.swift; sourceTree = "<group>"; };
+		7A30F02B1FC9E732003423A9 /* UsageStatsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsType.swift; sourceTree = "<group>"; };
+		7A30F02F1FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportDisaplyUsageStatsUpdate.swift; sourceTree = "<group>"; };
+		7A30F0311FC9F474003423A9 /* CanNotifyDisplayRenderDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanNotifyDisplayRenderDuration.swift; sourceTree = "<group>"; };
+		7A30F0331FC9F4B7003423A9 /* CanNotifyNetworkRequestDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanNotifyNetworkRequestDuration.swift; sourceTree = "<group>"; };
 		7A8F42561FC75A3400E57FAC /* FruitViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8F426A1FC75A3400E57FAC /* FruitViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8F426E1FC75A3400E57FAC /* FruitViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewerTests.swift; sourceTree = "<group>"; };
@@ -119,7 +134,14 @@
 		7A8F42D41FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
 		7A8F42D61FC75BCC00E57FAC /* UIView+Initialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Initialize.swift"; sourceTree = "<group>"; };
 		7A8F43101FC76B8600E57FAC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7AACD1541FCA01B900097C0C /* FruitViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FruitViewer-Bridging-Header.h"; sourceTree = "<group>"; };
+		7AACD1551FCA01B900097C0C /* FruitViewerExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FruitViewerExceptionHandler.h; sourceTree = "<group>"; };
+		7AACD1561FCA01B900097C0C /* FruitViewerExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FruitViewerExceptionHandler.m; sourceTree = "<group>"; };
+		7AACD1581FCA074700097C0C /* UsageStatsErrorNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsErrorNotifier.swift; sourceTree = "<group>"; };
 		7AD5630D1FC9A46E00215F55 /* FruitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewModel.swift; sourceTree = "<group>"; };
+		7AD563111FC9C2EA00215F55 /* UsageStatsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsNetworkService.swift; sourceTree = "<group>"; };
+		7AD563131FC9C6CA00215F55 /* NetworkServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceError.swift; sourceTree = "<group>"; };
+		7AD563171FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+ResponseType.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +235,16 @@
 				7A1DDF731FC96464000D21B7 /* FruitListViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7A30F0281FC9E721003423A9 /* UsageStats */ = {
+			isa = PBXGroup;
+			children = (
+				7A30F0291FC9E721003423A9 /* UsageStatsHandler.swift */,
+				7A30F02B1FC9E732003423A9 /* UsageStatsType.swift */,
+				7AACD1581FCA074700097C0C /* UsageStatsErrorNotifier.swift */,
+			);
+			path = UsageStats;
 			sourceTree = "<group>";
 		};
 		7A8F424D1FC75A3400E57FAC = {
@@ -387,6 +419,9 @@
 		7A8F42B31FC75BCC00E57FAC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7AACD1531FCA018900097C0C /* ExceptionHandler */,
+				7A30F0281FC9E721003423A9 /* UsageStats */,
+				7AD563151FC9C7A100215F55 /* Foundation */,
 				7A8F42B41FC75BCC00E57FAC /* Entities */,
 				7A8F42B61FC75BCC00E57FAC /* Functions */,
 				7A8F42B81FC75BCC00E57FAC /* Helpers */,
@@ -437,6 +472,8 @@
 			children = (
 				7A8F43101FC76B8600E57FAC /* Result.swift */,
 				7A8F42BD1FC75BCC00E57FAC /* FruitDataNetworkService.swift */,
+				7AD563111FC9C2EA00215F55 /* UsageStatsNetworkService.swift */,
+				7AD563131FC9C6CA00215F55 /* NetworkServiceError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -444,6 +481,7 @@
 		7A8F42C01FC75BCC00E57FAC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				7A30F02F1FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift */,
 				7A8F42C11FC75BCC00E57FAC /* CanInteractWithPresenter.swift */,
 				7A8F42C21FC75BCC00E57FAC /* CanShowStatusView.swift */,
 				7A8F42C31FC75BCC00E57FAC /* Coordinatable.swift */,
@@ -452,6 +490,8 @@
 				7A8F42C61FC75BCC00E57FAC /* PresenterDelegate.swift */,
 				7A8F42C71FC75BCC00E57FAC /* Reuseable.swift */,
 				7A8F42C81FC75BCC00E57FAC /* Task.swift */,
+				7A30F0311FC9F474003423A9 /* CanNotifyDisplayRenderDuration.swift */,
+				7A30F0331FC9F4B7003423A9 /* CanNotifyNetworkRequestDuration.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -510,6 +550,32 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		7AACD1531FCA018900097C0C /* ExceptionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				7AACD1551FCA01B900097C0C /* FruitViewerExceptionHandler.h */,
+				7AACD1561FCA01B900097C0C /* FruitViewerExceptionHandler.m */,
+				7AACD1541FCA01B900097C0C /* FruitViewer-Bridging-Header.h */,
+			);
+			path = ExceptionHandler;
+			sourceTree = "<group>";
+		};
+		7AD563151FC9C7A100215F55 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				7AD563161FC9C7A100215F55 /* HTTPURLResponse */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		7AD563161FC9C7A100215F55 /* HTTPURLResponse */ = {
+			isa = PBXGroup;
+			children = (
+				7AD563171FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift */,
+			);
+			path = HTTPURLResponse;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -560,6 +626,7 @@
 				TargetAttributes = {
 					7A8F42551FC75A3400E57FAC = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					7A8F42691FC75A3400E57FAC = {
@@ -619,10 +686,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD563121FC9C2EA00215F55 /* UsageStatsNetworkService.swift in Sources */,
 				7A1DDF7F1FC96464000D21B7 /* FruitListViewController.swift in Sources */,
+				7A30F0321FC9F474003423A9 /* CanNotifyDisplayRenderDuration.swift in Sources */,
 				7A8F42F71FC75BCC00E57FAC /* Reuseable.swift in Sources */,
 				7A8F42EE1FC75BCC00E57FAC /* CoordinatorHandler.swift in Sources */,
 				7A1DDF771FC96464000D21B7 /* CollectionViewDelegate.swift in Sources */,
+				7AACD1591FCA074700097C0C /* UsageStatsErrorNotifier.swift in Sources */,
 				7A1DDF781FC96464000D21B7 /* FruitListPresenter+Helper.swift in Sources */,
 				7A8F42ED1FC75BCC00E57FAC /* Strings.swift in Sources */,
 				7A8F42F21FC75BCC00E57FAC /* CanShowStatusView.swift in Sources */,
@@ -632,7 +702,10 @@
 				7A8F43111FC76B8600E57FAC /* Result.swift in Sources */,
 				7A1DDF791FC96464000D21B7 /* FruitListPresenter.swift in Sources */,
 				7A8F42F11FC75BCC00E57FAC /* CanInteractWithPresenter.swift in Sources */,
+				7AACD1571FCA01B900097C0C /* FruitViewerExceptionHandler.m in Sources */,
+				7A30F02A1FC9E722003423A9 /* UsageStatsHandler.swift in Sources */,
 				7A8F42FD1FC75BCC00E57FAC /* UICollectionReusableView+ReuseIdentifier.swift in Sources */,
+				7AD563181FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift in Sources */,
 				7A8F42F41FC75BCC00E57FAC /* Interactor.swift in Sources */,
 				7A8F42FB1FC75BCC00E57FAC /* LoadingView.swift in Sources */,
 				7A8F42F61FC75BCC00E57FAC /* PresenterDelegate.swift in Sources */,
@@ -648,15 +721,19 @@
 				7A8F42F51FC75BCC00E57FAC /* Presenter.swift in Sources */,
 				7A8F42EB1FC75BCC00E57FAC /* Fruit.swift in Sources */,
 				7A1DDF741FC96464000D21B7 /* FruitListNavigationCoordinator.swift in Sources */,
+				7A30F0341FC9F4B7003423A9 /* CanNotifyNetworkRequestDuration.swift in Sources */,
 				7A8F42DB1FC75BCC00E57FAC /* MainNavigationCoordinator.swift in Sources */,
 				7A8F42D81FC75BCC00E57FAC /* DetailedViewerPresenter.swift in Sources */,
+				7AD563141FC9C6CA00215F55 /* NetworkServiceError.swift in Sources */,
 				7A1DDF7E1FC96464000D21B7 /* FruitListViewController+UIViewControllerPreviewDelegate.swift in Sources */,
 				7A1DDF761FC96464000D21B7 /* CollectionViewDataSource.swift in Sources */,
 				7AD5630E1FC9A46E00215F55 /* FruitViewModel.swift in Sources */,
 				7A8F42FE1FC75BCC00E57FAC /* UICollectionView+Register.swift in Sources */,
+				7A30F0301FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift in Sources */,
 				7A8F43001FC75BCC00E57FAC /* UIView+Initialize.swift in Sources */,
 				7A8F42D71FC75BCC00E57FAC /* DetailedViewerNavigationCoordinator.swift in Sources */,
 				7A8F42FF1FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift in Sources */,
+				7A30F02C1FC9E732003423A9 /* UsageStatsType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,11 +878,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/FruitViewer/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.melvin.FruitViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FruitViewer/Source/Shared/ExceptionHandler/FruitViewer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -815,11 +895,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/FruitViewer/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.melvin.FruitViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FruitViewer/Source/Shared/ExceptionHandler/FruitViewer-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
