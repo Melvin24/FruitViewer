@@ -12,7 +12,7 @@ extension UIStoryboard {
     /// - parameter bundle: Main Bundle.
     ///
     /// - returns: The initial view controller of storyboard or nil if it cannot be located.
-    public class func instantiateViewControllerFromStoryboard<T: RawRepresentable>(withName name: T, bundle: Bundle? = nil) -> UIViewController? where T.RawValue == String {
+    class func instantiateViewControllerFromStoryboard<T: RawRepresentable>(withName name: T, bundle: Bundle? = nil) -> UIViewController? where T.RawValue == String {
         return storyboardWithName(name, bundle: bundle).instantiateInitialViewController()
     }
     
@@ -22,7 +22,7 @@ extension UIStoryboard {
     /// - parameter bundle: Main Bundle.
     ///
     /// - returns: A new storyboard object, or nil if the method cannot find the specified storyboard file.
-    public class func storyboardWithName<T: RawRepresentable>(_ name: T, bundle: Bundle? = nil) -> UIStoryboard where T.RawValue == String {
+    class func storyboardWithName<T: RawRepresentable>(_ name: T, bundle: Bundle? = nil) -> UIStoryboard where T.RawValue == String {
         return UIStoryboard(name: name.rawValue, bundle: bundle)
     }
 }

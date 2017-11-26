@@ -4,6 +4,7 @@
 
 import Foundation
 
+/// A protocol which view controllers can conform to, to identify presenter updates.
 protocol PresenterDelegate: class {
     
     /// Delegate method sent when the presenter is about to start updating content.

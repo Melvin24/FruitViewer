@@ -6,6 +6,7 @@ import UIKit
 
 extension FruitListPresenter {
     
+    // NOTE: Could potentially have a factory to setup view controllers
     /// Call this method to obtain a Detailed viewer for a given FruitViewModel Object.
     ///
     /// - Parameter FruitViewModel: FruitViewModel Object to use.

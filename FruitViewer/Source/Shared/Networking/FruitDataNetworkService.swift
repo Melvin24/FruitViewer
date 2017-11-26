@@ -5,12 +5,10 @@
 import Foundation
 
 struct RequestURL {
-    
     static let basePath: String = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master"
-    
-    
 }
 
+/// Responsible for performing Network request to fetch fruit data.
 class FruitDataNetworkService {
     
     var URLPath = "\(RequestURL.basePath)/data.json"
@@ -26,9 +24,9 @@ class FruitDataNetworkService {
         
     }
         
-    public typealias Completion = (Result<[Fruit]>) -> Void
+    typealias Completion = (Result<[Fruit]>) -> Void
     
-    public typealias Request = (@escaping Completion) throws -> Task
+    typealias Request = (@escaping Completion) throws -> Task
     
     /// Call this method to obtain a request to fetch fruit data.
     func fetchFruitData(session: URLSession) -> Request {
@@ -60,7 +58,5 @@ class FruitDataNetworkService {
                 
             }
         }
-
     }
-
 }

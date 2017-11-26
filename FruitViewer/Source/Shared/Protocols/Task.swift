@@ -20,7 +20,7 @@ protocol Task {
 
 extension URLSessionTask: Task {
     
-    public var isRunning: Bool {
+    var isRunning: Bool {
         return state == .running
     }
     

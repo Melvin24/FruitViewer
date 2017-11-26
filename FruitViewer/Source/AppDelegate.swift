@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         usageStatsHandler.activate()
         
+        NSSetUncaughtExceptionHandler(exceptionHandlerPointer)
+        
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
         
         let mainViewController = UIStoryboard.instantiateViewControllerFromStoryboard(withName: MainViewController.Storyboard.name)
@@ -28,23 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainViewController
         window?.makeKeyAndVisible()
         
-        NSSetUncaughtExceptionHandler(exceptionHandlerPointer)
-
         return true
         
-    }
-
-    func notifyException(_ exception: NSException) -> Void {
-        
-        let reason = exception.reason
-        
-        let key = UsageStatsHandler.UsageStatsNotificationInfoKeys.stats
-        
-        let userInfo: [AnyHashable: Any] = [key: UsageStatsType.error(UsageStatsErrorInfo(message: reason ?? ""))]
-        
-        NotificationCenter.default.post(name: UsageStatsHandler.UsageStatsNotificationName.load,
-                                        object: nil,
-                                        userInfo: userInfo)
     }
 
 }

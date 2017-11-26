@@ -4,6 +4,7 @@
 
 import UIKit
 
+/// Navigation coordinator for Detailed Viewer, used for dependency injection. 
 class DetailedViewerNavigationCoordinator: Coordinatable {
     
     func prepareForNavigation<From, To>(source: From, destination: To, userInfo: Any?) throws {

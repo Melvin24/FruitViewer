@@ -5,7 +5,7 @@
 import Foundation
 
 /// Errors produced from coordinating
-public enum CoordinateError: Error {
+enum CoordinateError: Error {
     
     /// - unsupported: The coordination was not supported.
     case unsupported(String)
@@ -13,7 +13,7 @@ public enum CoordinateError: Error {
 }
 
 /// Identifies something capable of preparing navigation i.e Dependency Injection.
-public protocol Coordinatable {
+protocol Coordinatable {
     
     /// Prepare the destination for navigation.
     ///

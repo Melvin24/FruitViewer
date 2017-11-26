@@ -25,7 +25,7 @@ class FruitListViewController: UIViewController, CanInteractWithPresenter, CanSh
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Fruit Viewer"
+        self.title = Strings.fruitListTitle
         
         setupRefreshController(forCollectionView: collectionView)
         
@@ -49,12 +49,8 @@ class FruitListViewController: UIViewController, CanInteractWithPresenter, CanSh
 
         collectionView.alwaysBounceVertical = true
         
-        if #available(iOS 10.0, *) {
-            collectionView.refreshControl = refreshControl
-        } else {
-            collectionView.insertSubview(refreshControl, at: 0)
-        }
-        
+        collectionView.refreshControl = refreshControl
+
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -94,6 +90,7 @@ class FruitListViewController: UIViewController, CanInteractWithPresenter, CanSh
         }, completion: completion)
     }
     
+    /// Test Injection
     var pushViewControllerToNavigationController = UINavigationController.pushViewController
 
 }

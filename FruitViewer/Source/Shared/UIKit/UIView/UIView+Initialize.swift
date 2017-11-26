@@ -13,7 +13,7 @@ extension UIView {
     /// - parameter bundle: The bundle to load the nib from, defaults to the main bundle.
     ///
     /// - returns: A view loaded from the nib in `bundle`.
-    public static func loadViewFromNib<T: UIView>(as type: T.Type, name: String = classNameFromType(T.self), bundle: Bundle = .main) -> T {
+    static func loadViewFromNib<T: UIView>(as type: T.Type, name: String = classNameFromType(T.self), bundle: Bundle = .main) -> T {
         return bundle.loadNibNamed(name, owner: nil, options: nil)?.first as! T
     }
 }

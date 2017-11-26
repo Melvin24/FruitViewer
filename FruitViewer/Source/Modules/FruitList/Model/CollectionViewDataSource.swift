@@ -4,6 +4,7 @@
 
 import UIKit
 
+/// Fruit List Collection View Data Source
 class CollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     @IBOutlet weak var viewController: FruitListViewController!
@@ -29,6 +30,7 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource {
         return cell
     }
     
+    // Test Injection
     var dequeueReusableCellForTypeAndIndexPath: ((UICollectionView) -> (FruitListCell.Type, IndexPath) -> FruitListCell) = UICollectionView.dequeueReusableCell
 
 }

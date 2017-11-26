@@ -17,7 +17,7 @@ class MainViewController: UIViewController, CanInteractWithPresenter {
             self?.bbcLogo.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
             self?.bbcLogo.alpha = 0
         }, completion: { [weak self] _ in
-            self?.presenter.navigateToPhotoViewer()
+            self?.presenter.navigateToFruitListViewController()
         })
         
     }

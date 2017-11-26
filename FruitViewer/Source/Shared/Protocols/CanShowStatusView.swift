@@ -19,7 +19,7 @@ extension CanShowStatusView {
     /// Responsible for changing status view. Pass nill to remove current status view.
     ///
     /// - Parameter newStatusView: new status view for example an Error View.
-    public func changeStatusView(with newStatusView: UIView?) {
+    func changeStatusView(with newStatusView: UIView?) {
         
         self.statusView?.removeFromSuperview()
         

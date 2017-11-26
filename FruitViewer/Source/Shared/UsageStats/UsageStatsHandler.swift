@@ -77,10 +77,12 @@ class UsageStatsHandler {
             
             let dispatchGroup = dispatchGroupForUsageStatsType(usageStatsType)
             
+            /// Setting up dispatch group to give the app a chance to perform network request.
             dispatchGroup?.enter()
             
             task = try request { [weak self] success, error in
                 
+                /// As soon as request completion, un-block current thread.
                 dispatchGroup?.leave()
                 
                 guard let strongSelf = self else {
@@ -98,7 +100,7 @@ class UsageStatsHandler {
             
             task?.resume()
             
-            _ = dispatchGroup?.wait(timeout: DispatchTime.now() + 5)
+            _ = dispatchGroup?.wait(timeout: DispatchTime.now() + 3)
 
         } catch let error as NetworkServiceError {
             logNetworkRequestError(self)(error, usageStatsType)
@@ -106,15 +108,6 @@ class UsageStatsHandler {
         } catch {
             executePendingUsageStats(self)()
             return
-        }
-    }
-    
-    var dispatchGroupForUsageStatsType: ((UsageStatsType) -> DispatchGroup?) = { usageStatsType in
-        switch usageStatsType {
-        case .error:
-            return DispatchGroup()
-        default:
-            return nil
         }
     }
     
@@ -177,6 +170,16 @@ class UsageStatsHandler {
     }
     
     // TEST INJECTION
+
+    var dispatchGroupForUsageStatsType: ((UsageStatsType) -> DispatchGroup?) = { usageStatsType in
+        switch usageStatsType {
+        case .error:
+            return DispatchGroup()
+        default:
+            return nil
+        }
+    }
+    
     var updateUserStatsUsingUsageStats = UsageStatsHandler.updateUserStats
     var executePendingUsageStats = UsageStatsHandler.clearPendingUsageStats
     var logNetworkRequestError = UsageStatsHandler.logNetworkServiceError

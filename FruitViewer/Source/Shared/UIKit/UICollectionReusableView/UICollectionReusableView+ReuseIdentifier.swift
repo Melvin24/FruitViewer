@@ -6,7 +6,8 @@ import UIKit
 
 extension UICollectionReusableView: Reuseable {
     
-    public static var defaultReuseIdentifier: String {
+    /// The default reuse identifier for cells
+    static var defaultReuseIdentifier: String {
         return "\(classNameFromType(self))Identifier"
     }
     

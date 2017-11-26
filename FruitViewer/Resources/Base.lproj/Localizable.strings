@@ -4,6 +4,9 @@
 
 */
 
+/// Fruit List View Controller Title
+"fruit-list.title" = "Fruit Viewer";
+
 /// API bad response.
 "fruit-list-api-bad-response.reason" = "Oops, the app did not understand the API response data.";
 

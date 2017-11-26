@@ -12,7 +12,7 @@ import Foundation
 /// - parameter type: The type who's name we want to retrieve
 ///
 /// - returns: A Class Name
-public func classNameFromType(_ type: AnyObject.Type) -> String {
+func classNameFromType(_ type: AnyObject.Type) -> String {
     let components = NSStringFromClass(type).components(separatedBy: ".")
     
     if components.count == 2 {

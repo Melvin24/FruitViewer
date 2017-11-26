@@ -4,8 +4,10 @@
 
 import UIKit
 
+/// Fruit List Collection View Delegate
 class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    /// Helpers
     let lineSpacing: CGFloat = 4
     let interItemSpacing: CGFloat = 4
     let numberOfItemsPerRowPortrait: CGFloat = 2
@@ -52,7 +54,7 @@ class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        // Obtain user initiated display time
+        // Obtain user initiated display time, on-select
         let userInitiatedDate = Date()
         
         let fruitViewModels = viewController.presenter.fruitViewModels
@@ -73,6 +75,5 @@ class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionVi
         viewController.pushViewControllerToNavigationController(navigationController)(detailedViewerViewController, true)
                 
     }
-    
     
 }

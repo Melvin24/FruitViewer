@@ -7,7 +7,6 @@ import UIKit
 /// Implementation for 3D Touch.
 extension FruitListViewController: UIViewControllerPreviewingDelegate {
     
-    @available(iOS 9.0, *)
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         
         guard let navigationController = navigationController,

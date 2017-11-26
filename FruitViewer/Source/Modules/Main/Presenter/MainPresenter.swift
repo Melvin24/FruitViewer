@@ -8,8 +8,8 @@ class MainPresenter: Presenter {
     
     weak var viewController: MainViewController?
     
-    /// Call this method to navigate to Photo Viewer view controller
-    func navigateToPhotoViewer() {
+    /// Call this method to navigate to Fruit List View Controller.
+    func navigateToFruitListViewController() {
         
         guard let viewController = self.viewController else {
             return
