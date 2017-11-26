@@ -1,10 +1,6 @@
 //
 //  UsageStatsNetworkService.swift
 //  FruitViewer
-//
-//  Created by John, Melvin (Associate Software Developer) on 25/11/2017.
-//  Copyright © 2017 John, Melvin (Associate Software Developer). All rights reserved.
-//
 
 import Foundation
 
@@ -14,7 +10,6 @@ class UsageStatsNetworkService {
     
     typealias Request = (@escaping Completion) throws -> Task
     
-    /// Call this method to obtain a request to fetch fruit data.
     func updateUsageStats(withURLPath URLPath: String, session: URLSession) -> Request {
         
         return { completion in

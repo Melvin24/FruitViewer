@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FruitViewer/Source/Shared/Protocols/CanNotifyDisplayRenderDuration.swift"
-            timestampString = "533383065.088825"
+            filePath = "FruitViewer/Source/Shared/UsageStats/UsageStatsHandler.swift"
+            timestampString = "533400625.01948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "notifyDisplayRenderDuration(startDate:endDate:notificationCenter:)"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "urlPath(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

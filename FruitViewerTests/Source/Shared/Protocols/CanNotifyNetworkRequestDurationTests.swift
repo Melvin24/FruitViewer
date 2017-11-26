@@ -1,24 +1,20 @@
 //
-//  UsageStatsErrorNotifierTests.swift
+//  CanNotifyNetworkRequestDurationTests.swift
 //  FruitViewerTests
-//
-//  Created by John, Melvin (Associate Software Developer) on 26/11/2017.
-//  Copyright © 2017 John, Melvin (Associate Software Developer). All rights reserved.
-//
 
 import XCTest
 @testable import FruitViewer
 
-class UsageStatsErrorNotifierTests: XCTestCase {
+class CanNotifyNetworkRequestDurationTests: XCTestCase {
     
-    func testNotifyException() {
-        
+    func testNotifyNetworkRequestDuration() {
+
         let mockNotificationCentre = MockNotificationCentre()
         
         let onPostNotification = expectation(description: " - onPostNotification")
         mockNotificationCentre.onPost = { notificationName, object, userInfo in
             
-            XCTAssertEqual(notificationName, UsageStatsHandler.UsageStatsNotificationName.error)
+            XCTAssertEqual(notificationName, UsageStatsHandler.UsageStatsNotificationName.load)
             XCTAssertNil(object)
             
             guard let usageStats = userInfo?[UsageStatsHandler.UsageStatsNotificationInfoKeys.stats] as? UsageStatsType else {
@@ -26,8 +22,8 @@ class UsageStatsErrorNotifierTests: XCTestCase {
             }
             
             switch usageStats {
-            case .error(let errorInfo):
-                XCTAssertEqual(errorInfo.message, "some reason")
+            case .load(let loadInfo):
+                XCTAssertEqual(loadInfo.requestTime, 0)
             default:
                 XCTFail()
             }
@@ -35,26 +31,30 @@ class UsageStatsErrorNotifierTests: XCTestCase {
             onPostNotification.fulfill()
         }
         
-        let mockException = NSException(name: .characterConversionException, reason: "some reason", userInfo: nil)
-        
-        UsageStatsErrorNotifier.notifyException(mockException, notificationCenter: mockNotificationCentre)
-        
+        let mockCanNotifyNetworkRequestDuration = MockCanNotifyNetworkRequestDuration()
+
+        let mockDate = Date()
+
+        mockCanNotifyNetworkRequestDuration.notifyNetworkRequestDuration(startDate: mockDate, endDate: mockDate, notificationCenter: mockNotificationCentre)
+
         waitForExpectations(timeout: 1)
-        
     }
     
 }
 
-extension UsageStatsErrorNotifierTests {
+extension CanNotifyNetworkRequestDurationTests {
     
     class MockNotificationCentre: NotificationCenter {
         
         var onPost: ((NSNotification.Name, Any?, [AnyHashable: Any]?) -> Void)?
-        
+
         override func post(name aName: NSNotification.Name, object anObject: Any?, userInfo aUserInfo: [AnyHashable : Any]? = nil) {
             onPost?(aName, anObject, aUserInfo)
         }
         
+    }
+    
+    class MockCanNotifyNetworkRequestDuration: CanNotifyNetworkRequestDuration {
     }
     
 }

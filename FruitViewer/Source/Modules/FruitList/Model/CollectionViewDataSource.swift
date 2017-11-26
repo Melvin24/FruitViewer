@@ -18,7 +18,7 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(type: FruitListCell.self, forIndexPath: indexPath)
+        let cell = dequeueReusableCellForTypeAndIndexPath(collectionView)(FruitListCell.self, indexPath)
         
         guard let image = viewController.presenter.fruitViewModels[indexPath.row].fruitImage else {
             return cell
@@ -28,5 +28,7 @@ class CollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         return cell
     }
+    
+    var dequeueReusableCellForTypeAndIndexPath: ((UICollectionView) -> (FruitListCell.Type, IndexPath) -> FruitListCell) = UICollectionView.dequeueReusableCell
 
 }

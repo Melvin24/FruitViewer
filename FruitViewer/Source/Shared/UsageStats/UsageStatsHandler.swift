@@ -1,19 +1,17 @@
 //
 //  UsageStatusHandler.swift
 //  FruitViewer
-//
-//  Created by John, Melvin (Associate Software Developer) on 25/11/2017.
-//  Copyright © 2017 John, Melvin (Associate Software Developer). All rights reserved.
-//
 
 import Foundation
 
+/// Responsibe for managing Usage stats such as netowrk request load time, display time and error. 
 class UsageStatsHandler {
     
     struct UsageStatsNotificationInfoKeys {
         static let stats = "stats"
     }
     
+    /// Usage Stats Notification Names
     struct UsageStatsNotificationName {
         static let load = NSNotification.Name(rawValue: "UsageStatsLoad")
         static let display = NSNotification.Name(rawValue: "UsageStatsDisplay")
@@ -38,6 +36,7 @@ class UsageStatsHandler {
         notificationCenter.removeObserver(self, name: UsageStatsNotificationName.error, object: nil)
     }
 
+    /// Call this method to activate Usage stats, to start listening got Usage notifications.
     func activate() {
         notificationCenter.addObserver(forName: UsageStatsNotificationName.load , object: nil, queue: nil, using: handleNotification)
         notificationCenter.addObserver(forName: UsageStatsNotificationName.display , object: nil, queue: nil, using: handleNotification)
@@ -119,6 +118,7 @@ class UsageStatsHandler {
         }
     }
     
+    /// Responsible for manging any pending usage stats
     func clearPendingUsageStats() {
         guard !pendingUsageStatsUpdate.isEmpty else {
             return
@@ -129,9 +129,10 @@ class UsageStatsHandler {
         updateUserStats(usingUsageStatsType: lastUsageStats)
     }
     
+    /// Responsible for providing request URL for a give usage stats type.
     func urlPath(for usageStatsType: UsageStatsType) -> String {
         
-        let baseURLPath = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/stats?event="
+        let baseURLPath = "\(RequestURL.basePath)/stats?event="
         
         let suffix: String
         
@@ -154,6 +155,7 @@ class UsageStatsHandler {
 
     }
     
+    /// Responsible for logging any unexpected network request failures. 
     func logNetworkServiceError(_ networkServiceError: NetworkServiceError, forUsageStatsType usageStatsType: UsageStatsType) {
         
         var message = "Failed to update \(usageStatsType.debugLogName()), "
@@ -169,6 +171,9 @@ class UsageStatsHandler {
             }
             message = message + "because of unexpected error, \(response.rawValue)"
         }
+        
+        print(message)
+        
     }
     
     // TEST INJECTION

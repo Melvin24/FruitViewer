@@ -2,7 +2,6 @@
 //  HTTPURLResponse+ResponseTypeTests.swift
 //  FruitViewerTests
 
-
 import XCTest
 @testable import FruitViewer
 

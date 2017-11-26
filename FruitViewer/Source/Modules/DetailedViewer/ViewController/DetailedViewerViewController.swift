@@ -17,6 +17,8 @@ class DetailedViewerViewController: UIViewController, CanInteractWithPresenter {
     
     var userInitiatedDate: Date!
     
+    var didSendDisplayNotification: Bool = false
+    
     var finishedDisplayRenderDate: Date!
     
     /// Associated presenter.
@@ -43,7 +45,11 @@ class DetailedViewerViewController: UIViewController, CanInteractWithPresenter {
         
         finishedDisplayRenderDate = Date()
         
-        notifyDisplayRenderDuration(presenter, userInitiatedDate, finishedDisplayRenderDate)
+        guard didSendDisplayNotification else {
+            notifyDisplayRenderDuration(presenter, userInitiatedDate, finishedDisplayRenderDate)
+            didSendDisplayNotification = true
+            return
+        }
     }
     
     func toggleinformationContainerView(_ isHidden: Bool) {

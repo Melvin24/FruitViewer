@@ -24,8 +24,21 @@
 		7A30F0301FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30F02F1FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift */; };
 		7A30F0321FC9F474003423A9 /* CanNotifyDisplayRenderDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30F0311FC9F474003423A9 /* CanNotifyDisplayRenderDuration.swift */; };
 		7A30F0341FC9F4B7003423A9 /* CanNotifyNetworkRequestDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30F0331FC9F4B7003423A9 /* CanNotifyNetworkRequestDuration.swift */; };
-		7A7E43941FCACA140072087F /* UsageStatsHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43931FCACA140072087F /* UsageStatsHandlerTests.swift */; };
-		7A8F426F1FC75A3400E57FAC /* FruitViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F426E1FC75A3400E57FAC /* FruitViewerTests.swift */; };
+		7A7E43B81FCAE11E0072087F /* FruitDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43A51FCAE11E0072087F /* FruitDataTests.swift */; };
+		7A7E43B91FCAE11E0072087F /* FruitViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43A61FCAE11E0072087F /* FruitViewModelTests.swift */; };
+		7A7E43BA1FCAE11E0072087F /* FunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43A81FCAE11E0072087F /* FunctionsTests.swift */; };
+		7A7E43BB1FCAE11E0072087F /* HTTPURLResponse+ResponseTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43AA1FCAE11E0072087F /* HTTPURLResponse+ResponseTypeTests.swift */; };
+		7A7E43BC1FCAE11E0072087F /* FruitDataNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43AC1FCAE11E0072087F /* FruitDataNetworkServiceTests.swift */; };
+		7A7E43BD1FCAE11E0072087F /* UsageStatsNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43AD1FCAE11E0072087F /* UsageStatsNetworkServiceTests.swift */; };
+		7A7E43BE1FCAE11E0072087F /* CanNotifyDisplayRenderDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43AF1FCAE11E0072087F /* CanNotifyDisplayRenderDurationTests.swift */; };
+		7A7E43BF1FCAE11E0072087F /* CanNotifyNetworkRequestDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43B01FCAE11E0072087F /* CanNotifyNetworkRequestDurationTests.swift */; };
+		7A7E43C01FCAE11E0072087F /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43B11FCAE11E0072087F /* InteractorTests.swift */; };
+		7A7E43C11FCAE11E0072087F /* ErrorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43B31FCAE11E0072087F /* ErrorViewTests.swift */; };
+		7A7E43C21FCAE11E0072087F /* LoadingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43B41FCAE11E0072087F /* LoadingViewTests.swift */; };
+		7A7E43C31FCAE11E0072087F /* UsageStatsErrorNotifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43B61FCAE11E0072087F /* UsageStatsErrorNotifierTests.swift */; };
+		7A7E43C41FCAE11E0072087F /* UsageStatsHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43B71FCAE11E0072087F /* UsageStatsHandlerTests.swift */; };
+		7A7E43CE1FCAE1AD0072087F /* FruitListNavigationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43CD1FCAE1AD0072087F /* FruitListNavigationCoordinatorTests.swift */; };
+		7A7E43D01FCAE5150072087F /* FruitListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E43CF1FCAE5150072087F /* FruitListInteractorTests.swift */; };
 		7A8F42811FC75AED00E57FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F427C1FC75AED00E57FAC /* AppDelegate.swift */; };
 		7A8F42821FC75AED00E57FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F427E1FC75AED00E57FAC /* Assets.xcassets */; };
 		7A8F42831FC75AED00E57FAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F427F1FC75AED00E57FAC /* LaunchScreen.storyboard */; };
@@ -59,24 +72,15 @@
 		7A8F42FF1FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42D41FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift */; };
 		7A8F43001FC75BCC00E57FAC /* UIView+Initialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F42D61FC75BCC00E57FAC /* UIView+Initialize.swift */; };
 		7A8F43111FC76B8600E57FAC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F43101FC76B8600E57FAC /* Result.swift */; };
+		7AA8C4231FCAE8F300AA64BF /* CollectionViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8C4221FCAE8F300AA64BF /* CollectionViewDataSourceTests.swift */; };
+		7AA8C4251FCAEEA700AA64BF /* CollectionViewDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8C4241FCAEEA700AA64BF /* CollectionViewDelegateTests.swift */; };
+		7AA8C4271FCAF81E00AA64BF /* FruitListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8C4261FCAF81E00AA64BF /* FruitListPresenterTests.swift */; };
 		7AACD1571FCA01B900097C0C /* FruitViewerExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1561FCA01B900097C0C /* FruitViewerExceptionHandler.m */; };
 		7AACD1591FCA074700097C0C /* UsageStatsErrorNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1581FCA074700097C0C /* UsageStatsErrorNotifier.swift */; };
-		7AACD17A1FCA33EC00097C0C /* ErrorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1791FCA33EC00097C0C /* ErrorViewTests.swift */; };
-		7AACD17C1FCA348600097C0C /* LoadingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD17B1FCA348600097C0C /* LoadingViewTests.swift */; };
-		7AACD17F1FCA37D600097C0C /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD17E1FCA37D600097C0C /* InteractorTests.swift */; };
-		7AACD1811FCA3AD300097C0C /* CanNotifyNetworkRequestDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1801FCA3AD300097C0C /* CanNotifyNetworkRequestDurationTests.swift */; };
-		7AACD1831FCA495B00097C0C /* CanNotifyDisplayRenderDurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1821FCA495B00097C0C /* CanNotifyDisplayRenderDurationTests.swift */; };
-		7AACD1861FCAAFDB00097C0C /* UsageStatsNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1851FCAAFDB00097C0C /* UsageStatsNetworkServiceTests.swift */; };
-		7AACD1881FCAB76200097C0C /* FruitDataNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1871FCAB76200097C0C /* FruitDataNetworkServiceTests.swift */; };
-		7AACD18B1FCABB6800097C0C /* FunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD18A1FCABB6800097C0C /* FunctionsTests.swift */; };
-		7AACD18E1FCABC7700097C0C /* FruitDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD18D1FCABC7700097C0C /* FruitDataTests.swift */; };
-		7AACD1901FCABF5C00097C0C /* FruitViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD18F1FCABF5C00097C0C /* FruitViewModelTests.swift */; };
-		7AACD1931FCAC1A700097C0C /* HTTPURLResponse+ResponseTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACD1921FCAC1A700097C0C /* HTTPURLResponse+ResponseTypeTests.swift */; };
 		7AD5630E1FC9A46E00215F55 /* FruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD5630D1FC9A46E00215F55 /* FruitViewModel.swift */; };
 		7AD563121FC9C2EA00215F55 /* UsageStatsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563111FC9C2EA00215F55 /* UsageStatsNetworkService.swift */; };
 		7AD563141FC9C6CA00215F55 /* NetworkServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563131FC9C6CA00215F55 /* NetworkServiceError.swift */; };
 		7AD563181FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD563171FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift */; };
-		7AF077801FCAC82A0000F05D /* UsageStatsErrorNotifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0777F1FCAC82A0000F05D /* UsageStatsErrorNotifierTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,10 +111,23 @@
 		7A30F02F1FC9F43D003423A9 /* SupportDisaplyUsageStatsUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportDisaplyUsageStatsUpdate.swift; sourceTree = "<group>"; };
 		7A30F0311FC9F474003423A9 /* CanNotifyDisplayRenderDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanNotifyDisplayRenderDuration.swift; sourceTree = "<group>"; };
 		7A30F0331FC9F4B7003423A9 /* CanNotifyNetworkRequestDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanNotifyNetworkRequestDuration.swift; sourceTree = "<group>"; };
-		7A7E43931FCACA140072087F /* UsageStatsHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsHandlerTests.swift; sourceTree = "<group>"; };
+		7A7E43A51FCAE11E0072087F /* FruitDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDataTests.swift; sourceTree = "<group>"; };
+		7A7E43A61FCAE11E0072087F /* FruitViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitViewModelTests.swift; sourceTree = "<group>"; };
+		7A7E43A81FCAE11E0072087F /* FunctionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionsTests.swift; sourceTree = "<group>"; };
+		7A7E43AA1FCAE11E0072087F /* HTTPURLResponse+ResponseTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+ResponseTypeTests.swift"; sourceTree = "<group>"; };
+		7A7E43AC1FCAE11E0072087F /* FruitDataNetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDataNetworkServiceTests.swift; sourceTree = "<group>"; };
+		7A7E43AD1FCAE11E0072087F /* UsageStatsNetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageStatsNetworkServiceTests.swift; sourceTree = "<group>"; };
+		7A7E43AF1FCAE11E0072087F /* CanNotifyDisplayRenderDurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanNotifyDisplayRenderDurationTests.swift; sourceTree = "<group>"; };
+		7A7E43B01FCAE11E0072087F /* CanNotifyNetworkRequestDurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanNotifyNetworkRequestDurationTests.swift; sourceTree = "<group>"; };
+		7A7E43B11FCAE11E0072087F /* InteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
+		7A7E43B31FCAE11E0072087F /* ErrorViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorViewTests.swift; sourceTree = "<group>"; };
+		7A7E43B41FCAE11E0072087F /* LoadingViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewTests.swift; sourceTree = "<group>"; };
+		7A7E43B61FCAE11E0072087F /* UsageStatsErrorNotifierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageStatsErrorNotifierTests.swift; sourceTree = "<group>"; };
+		7A7E43B71FCAE11E0072087F /* UsageStatsHandlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageStatsHandlerTests.swift; sourceTree = "<group>"; };
+		7A7E43CD1FCAE1AD0072087F /* FruitListNavigationCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListNavigationCoordinatorTests.swift; sourceTree = "<group>"; };
+		7A7E43CF1FCAE5150072087F /* FruitListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListInteractorTests.swift; sourceTree = "<group>"; };
 		7A8F42561FC75A3400E57FAC /* FruitViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8F426A1FC75A3400E57FAC /* FruitViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A8F426E1FC75A3400E57FAC /* FruitViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewerTests.swift; sourceTree = "<group>"; };
 		7A8F42701FC75A3400E57FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8F427A1FC75AED00E57FAC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8F427C1FC75AED00E57FAC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,26 +163,17 @@
 		7A8F42D41FC75BCC00E57FAC /* UIStoryboard+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
 		7A8F42D61FC75BCC00E57FAC /* UIView+Initialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Initialize.swift"; sourceTree = "<group>"; };
 		7A8F43101FC76B8600E57FAC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7AA8C4221FCAE8F300AA64BF /* CollectionViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceTests.swift; sourceTree = "<group>"; };
+		7AA8C4241FCAEEA700AA64BF /* CollectionViewDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegateTests.swift; sourceTree = "<group>"; };
+		7AA8C4261FCAF81E00AA64BF /* FruitListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListPresenterTests.swift; sourceTree = "<group>"; };
 		7AACD1541FCA01B900097C0C /* FruitViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FruitViewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		7AACD1551FCA01B900097C0C /* FruitViewerExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FruitViewerExceptionHandler.h; sourceTree = "<group>"; };
 		7AACD1561FCA01B900097C0C /* FruitViewerExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FruitViewerExceptionHandler.m; sourceTree = "<group>"; };
 		7AACD1581FCA074700097C0C /* UsageStatsErrorNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsErrorNotifier.swift; sourceTree = "<group>"; };
-		7AACD1791FCA33EC00097C0C /* ErrorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewTests.swift; sourceTree = "<group>"; };
-		7AACD17B1FCA348600097C0C /* LoadingViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewTests.swift; sourceTree = "<group>"; };
-		7AACD17E1FCA37D600097C0C /* InteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
-		7AACD1801FCA3AD300097C0C /* CanNotifyNetworkRequestDurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanNotifyNetworkRequestDurationTests.swift; sourceTree = "<group>"; };
-		7AACD1821FCA495B00097C0C /* CanNotifyDisplayRenderDurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanNotifyDisplayRenderDurationTests.swift; sourceTree = "<group>"; };
-		7AACD1851FCAAFDB00097C0C /* UsageStatsNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsNetworkServiceTests.swift; sourceTree = "<group>"; };
-		7AACD1871FCAB76200097C0C /* FruitDataNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDataNetworkServiceTests.swift; sourceTree = "<group>"; };
-		7AACD18A1FCABB6800097C0C /* FunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsTests.swift; sourceTree = "<group>"; };
-		7AACD18D1FCABC7700097C0C /* FruitDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDataTests.swift; sourceTree = "<group>"; };
-		7AACD18F1FCABF5C00097C0C /* FruitViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewModelTests.swift; sourceTree = "<group>"; };
-		7AACD1921FCAC1A700097C0C /* HTTPURLResponse+ResponseTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+ResponseTypeTests.swift"; sourceTree = "<group>"; };
 		7AD5630D1FC9A46E00215F55 /* FruitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewModel.swift; sourceTree = "<group>"; };
 		7AD563111FC9C2EA00215F55 /* UsageStatsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsNetworkService.swift; sourceTree = "<group>"; };
 		7AD563131FC9C6CA00215F55 /* NetworkServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceError.swift; sourceTree = "<group>"; };
 		7AD563171FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+ResponseType.swift"; sourceTree = "<group>"; };
-		7AF0777F1FCAC82A0000F05D /* UsageStatsErrorNotifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsErrorNotifierTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +279,143 @@
 			path = UsageStats;
 			sourceTree = "<group>";
 		};
+		7A7E43A21FCAE11E0072087F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43C51FCAE1790072087F /* Modules */,
+				7A7E43A31FCAE11E0072087F /* Shared */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		7A7E43A31FCAE11E0072087F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43A41FCAE11E0072087F /* Entities */,
+				7A7E43A71FCAE11E0072087F /* Functions */,
+				7A7E43A91FCAE11E0072087F /* HTTPURLResponse */,
+				7A7E43AB1FCAE11E0072087F /* Networking */,
+				7A7E43AE1FCAE11E0072087F /* Protocols */,
+				7A7E43B21FCAE11E0072087F /* StatusView */,
+				7A7E43B51FCAE11E0072087F /* UsageStats */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7A7E43A41FCAE11E0072087F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43A51FCAE11E0072087F /* FruitDataTests.swift */,
+				7A7E43A61FCAE11E0072087F /* FruitViewModelTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7A7E43A71FCAE11E0072087F /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43A81FCAE11E0072087F /* FunctionsTests.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		7A7E43A91FCAE11E0072087F /* HTTPURLResponse */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43AA1FCAE11E0072087F /* HTTPURLResponse+ResponseTypeTests.swift */,
+			);
+			path = HTTPURLResponse;
+			sourceTree = "<group>";
+		};
+		7A7E43AB1FCAE11E0072087F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43AC1FCAE11E0072087F /* FruitDataNetworkServiceTests.swift */,
+				7A7E43AD1FCAE11E0072087F /* UsageStatsNetworkServiceTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7A7E43AE1FCAE11E0072087F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43AF1FCAE11E0072087F /* CanNotifyDisplayRenderDurationTests.swift */,
+				7A7E43B01FCAE11E0072087F /* CanNotifyNetworkRequestDurationTests.swift */,
+				7A7E43B11FCAE11E0072087F /* InteractorTests.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7A7E43B21FCAE11E0072087F /* StatusView */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43B31FCAE11E0072087F /* ErrorViewTests.swift */,
+				7A7E43B41FCAE11E0072087F /* LoadingViewTests.swift */,
+			);
+			path = StatusView;
+			sourceTree = "<group>";
+		};
+		7A7E43B51FCAE11E0072087F /* UsageStats */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43B61FCAE11E0072087F /* UsageStatsErrorNotifierTests.swift */,
+				7A7E43B71FCAE11E0072087F /* UsageStatsHandlerTests.swift */,
+			);
+			path = UsageStats;
+			sourceTree = "<group>";
+		};
+		7A7E43C51FCAE1790072087F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43C61FCAE1790072087F /* FruitList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7A7E43C61FCAE1790072087F /* FruitList */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43C71FCAE1790072087F /* Coordinator */,
+				7A7E43C81FCAE1790072087F /* Interactor */,
+				7A7E43C91FCAE1790072087F /* Model */,
+				7A7E43CA1FCAE1790072087F /* Presenter */,
+			);
+			path = FruitList;
+			sourceTree = "<group>";
+		};
+		7A7E43C71FCAE1790072087F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43CD1FCAE1AD0072087F /* FruitListNavigationCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7A7E43C81FCAE1790072087F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E43CF1FCAE5150072087F /* FruitListInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7A7E43C91FCAE1790072087F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AA8C4221FCAE8F300AA64BF /* CollectionViewDataSourceTests.swift */,
+				7AA8C4241FCAEEA700AA64BF /* CollectionViewDelegateTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A7E43CA1FCAE1790072087F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7AA8C4261FCAF81E00AA64BF /* FruitListPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		7A8F424D1FC75A3400E57FAC = {
 			isa = PBXGroup;
 			children = (
@@ -302,8 +447,7 @@
 		7A8F426D1FC75A3400E57FAC /* FruitViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				7AACD1741FCA339F00097C0C /* Shared */,
-				7A8F426E1FC75A3400E57FAC /* FruitViewerTests.swift */,
+				7A7E43A21FCAE11E0072087F /* Source */,
 				7A8F42701FC75A3400E57FAC /* Info.plist */,
 			);
 			path = FruitViewerTests;
@@ -568,73 +712,6 @@
 			path = ExceptionHandler;
 			sourceTree = "<group>";
 		};
-		7AACD1741FCA339F00097C0C /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				7AF0777E1FCAC80B0000F05D /* UsageStats */,
-				7AACD1911FCAC18900097C0C /* HTTPURLResponse */,
-				7AACD18C1FCABC5900097C0C /* Entities */,
-				7AACD1891FCABB5800097C0C /* Functions */,
-				7AACD1841FCAAFC700097C0C /* Networking */,
-				7AACD17D1FCA37C500097C0C /* Protocols */,
-				7AACD1751FCA339F00097C0C /* StatusView */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		7AACD1751FCA339F00097C0C /* StatusView */ = {
-			isa = PBXGroup;
-			children = (
-				7AACD1791FCA33EC00097C0C /* ErrorViewTests.swift */,
-				7AACD17B1FCA348600097C0C /* LoadingViewTests.swift */,
-			);
-			path = StatusView;
-			sourceTree = "<group>";
-		};
-		7AACD17D1FCA37C500097C0C /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				7AACD17E1FCA37D600097C0C /* InteractorTests.swift */,
-				7AACD1801FCA3AD300097C0C /* CanNotifyNetworkRequestDurationTests.swift */,
-				7AACD1821FCA495B00097C0C /* CanNotifyDisplayRenderDurationTests.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		7AACD1841FCAAFC700097C0C /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				7AACD1851FCAAFDB00097C0C /* UsageStatsNetworkServiceTests.swift */,
-				7AACD1871FCAB76200097C0C /* FruitDataNetworkServiceTests.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		7AACD1891FCABB5800097C0C /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				7AACD18A1FCABB6800097C0C /* FunctionsTests.swift */,
-			);
-			path = Functions;
-			sourceTree = "<group>";
-		};
-		7AACD18C1FCABC5900097C0C /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				7AACD18D1FCABC7700097C0C /* FruitDataTests.swift */,
-				7AACD18F1FCABF5C00097C0C /* FruitViewModelTests.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		7AACD1911FCAC18900097C0C /* HTTPURLResponse */ = {
-			isa = PBXGroup;
-			children = (
-				7AACD1921FCAC1A700097C0C /* HTTPURLResponse+ResponseTypeTests.swift */,
-			);
-			path = HTTPURLResponse;
-			sourceTree = "<group>";
-		};
 		7AD563151FC9C7A100215F55 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,15 +726,6 @@
 				7AD563171FC9C7BF00215F55 /* HTTPURLResponse+ResponseType.swift */,
 			);
 			path = HTTPURLResponse;
-			sourceTree = "<group>";
-		};
-		7AF0777E1FCAC80B0000F05D /* UsageStats */ = {
-			isa = PBXGroup;
-			children = (
-				7AF0777F1FCAC82A0000F05D /* UsageStatsErrorNotifierTests.swift */,
-				7A7E43931FCACA140072087F /* UsageStatsHandlerTests.swift */,
-			);
-			path = UsageStats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -825,20 +893,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AACD18B1FCABB6800097C0C /* FunctionsTests.swift in Sources */,
-				7AACD1831FCA495B00097C0C /* CanNotifyDisplayRenderDurationTests.swift in Sources */,
-				7A8F426F1FC75A3400E57FAC /* FruitViewerTests.swift in Sources */,
-				7AACD17C1FCA348600097C0C /* LoadingViewTests.swift in Sources */,
-				7AACD1881FCAB76200097C0C /* FruitDataNetworkServiceTests.swift in Sources */,
-				7AF077801FCAC82A0000F05D /* UsageStatsErrorNotifierTests.swift in Sources */,
-				7AACD1861FCAAFDB00097C0C /* UsageStatsNetworkServiceTests.swift in Sources */,
-				7AACD18E1FCABC7700097C0C /* FruitDataTests.swift in Sources */,
-				7AACD17F1FCA37D600097C0C /* InteractorTests.swift in Sources */,
-				7AACD1811FCA3AD300097C0C /* CanNotifyNetworkRequestDurationTests.swift in Sources */,
-				7AACD1901FCABF5C00097C0C /* FruitViewModelTests.swift in Sources */,
-				7AACD17A1FCA33EC00097C0C /* ErrorViewTests.swift in Sources */,
-				7A7E43941FCACA140072087F /* UsageStatsHandlerTests.swift in Sources */,
-				7AACD1931FCAC1A700097C0C /* HTTPURLResponse+ResponseTypeTests.swift in Sources */,
+				7A7E43B81FCAE11E0072087F /* FruitDataTests.swift in Sources */,
+				7AA8C4271FCAF81E00AA64BF /* FruitListPresenterTests.swift in Sources */,
+				7A7E43C21FCAE11E0072087F /* LoadingViewTests.swift in Sources */,
+				7A7E43CE1FCAE1AD0072087F /* FruitListNavigationCoordinatorTests.swift in Sources */,
+				7A7E43C01FCAE11E0072087F /* InteractorTests.swift in Sources */,
+				7A7E43C11FCAE11E0072087F /* ErrorViewTests.swift in Sources */,
+				7A7E43C31FCAE11E0072087F /* UsageStatsErrorNotifierTests.swift in Sources */,
+				7A7E43B91FCAE11E0072087F /* FruitViewModelTests.swift in Sources */,
+				7A7E43BD1FCAE11E0072087F /* UsageStatsNetworkServiceTests.swift in Sources */,
+				7AA8C4251FCAEEA700AA64BF /* CollectionViewDelegateTests.swift in Sources */,
+				7A7E43BF1FCAE11E0072087F /* CanNotifyNetworkRequestDurationTests.swift in Sources */,
+				7A7E43BA1FCAE11E0072087F /* FunctionsTests.swift in Sources */,
+				7A7E43BB1FCAE11E0072087F /* HTTPURLResponse+ResponseTypeTests.swift in Sources */,
+				7A7E43BE1FCAE11E0072087F /* CanNotifyDisplayRenderDurationTests.swift in Sources */,
+				7A7E43D01FCAE5150072087F /* FruitListInteractorTests.swift in Sources */,
+				7A7E43C41FCAE11E0072087F /* UsageStatsHandlerTests.swift in Sources */,
+				7A7E43BC1FCAE11E0072087F /* FruitDataNetworkServiceTests.swift in Sources */,
+				7AA8C4231FCAE8F300AA64BF /* CollectionViewDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

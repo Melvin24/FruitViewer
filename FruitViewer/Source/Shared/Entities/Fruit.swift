@@ -4,6 +4,7 @@
 
 import UIKit
 
+/// A Struct to represent Fruit API
 struct FruitData: Decodable {
     
     enum FruitDataCodingKey: CodingKey {
@@ -20,7 +21,7 @@ struct FruitData: Decodable {
     }
     
 }
-/// A struct to represent fruit.
+/// A struct to represent Fruit.
 struct Fruit: Decodable {
     
     enum Kind: String, Decodable {

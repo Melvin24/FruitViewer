@@ -4,6 +4,7 @@
 
 import UIKit
 
+/// Presenter, Responsible for initaliting network request. Acts as a mediator for view and iinteractor.
 class FruitListPresenter: Presenter {
     
     /// Associated view controller.
@@ -22,11 +23,10 @@ class FruitListPresenter: Presenter {
     /// Call this method to load any required data.
     func loadIfRequired() {
         
-        self.viewController?.presenterWillUpdateContent()
+        presenterWillUpdateContent(self.viewController)
 
         let fetchStart = Date()
 
-        // Asking the interactor to fetch data for search term. 
         interactor.fetchData { [weak self] result in
             
             guard let strongSelf = self else {
@@ -42,18 +42,30 @@ class FruitListPresenter: Presenter {
                 strongSelf.fruitViewModels = fruits.map {
                     return FruitViewModel(fruit: $0)
                 }
-                strongSelf.viewController?.presenterDidUpdateContent()
+                strongSelf.presenterDidUpdateContent(strongSelf.viewController)
             case .failure(let error):
-                strongSelf.viewController?.presenterDidFail(withError: error)
+                strongSelf.presenterDidFailWithError(strongSelf.viewController, error)
             }
         }
 
     }
     
+    // Test Injection
     var notifyLoadUsageStatsForRequestTime: ((CanNotifyNetworkRequestDuration, Date, Date) -> Void) = { notifier, startDate, endDate in
         notifier.notifyNetworkRequestDuration(startDate: startDate, endDate: endDate)
     }
     
+    var presenterWillUpdateContent: ((PresenterDelegate?) -> Void) = { presenterDelegate in
+        presenterDelegate?.presenterWillUpdateContent()
+    }
+    
+    var presenterDidUpdateContent: ((PresenterDelegate?) -> Void) = { presenterDelegate in
+        presenterDelegate?.presenterDidUpdateContent()
+    }
+    
+    var presenterDidFailWithError: ((PresenterDelegate?, Error) -> Void) = { presenterDelegate, error in
+        presenterDelegate?.presenterDidFail(withError: error)
+    }
 }
 
 extension FruitListPresenter: CanNotifyNetworkRequestDuration {

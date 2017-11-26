@@ -1,16 +1,19 @@
 //
 //  UsageStatsType.swift
 //  FruitViewer
-//
-//  Created by John, Melvin (Associate Software Developer) on 25/11/2017.
-//  Copyright © 2017 John, Melvin (Associate Software Developer). All rights reserved.
-//
 
 import Foundation
 
+/// Enum to represent different types of usage stats.
 enum UsageStatsType {
+    
+    /// For network request load time
     case load(UsageStatsLoadInfo)
+    
+    /// For Display render load time.
     case display(UsageStatsDisplayInfo)
+    
+    /// For exceptions.
     case error(UsageStatsErrorInfo)
     
     func debugLogName() -> String {

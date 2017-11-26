@@ -23,6 +23,9 @@ extension FruitListViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         
+        // Obtain user initiated display time
+        let userInitiatedDate = Date()
+
         let collectionViewLocation = collectionView.convert(location, from: view)
         
         guard let indexPath = collectionView.indexPathForItem(at: collectionViewLocation),
@@ -36,15 +39,18 @@ extension FruitListViewController: UIViewControllerPreviewingDelegate {
             return nil
         }
 
-        guard let detailedPhotoViewController = presenter.detailedPhotoViewerViewController(with: fruitViewModels[indexPath.row], shouldHideDetails: true) else {
+        guard let detailedViewerViewController = presenter.detailedPhotoViewerViewController(with: fruitViewModels[indexPath.row], shouldHideDetails: true) else {
             return nil
         }
 
-        detailedPhotoViewController.preferredContentSize = CGSize(width: 0.0, height: 300)
+        // set to viewcontroller for obtain display render duration.
+        detailedViewerViewController.userInitiatedDate = userInitiatedDate
+
+        detailedViewerViewController.preferredContentSize = CGSize(width: 0.0, height: 300)
         
         previewingContext.sourceRect = cell.frame
         
-        return detailedPhotoViewController
+        return detailedViewerViewController
         
     }
     

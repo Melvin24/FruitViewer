@@ -4,9 +4,16 @@
 
 import Foundation
 
+struct RequestURL {
+    
+    static let basePath: String = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master"
+    
+    
+}
+
 class FruitDataNetworkService {
     
-    var URLPath = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json"
+    var URLPath = "\(RequestURL.basePath)/data.json"
     
     /// Network Error
     enum FruitDataNetworkingError: Error {

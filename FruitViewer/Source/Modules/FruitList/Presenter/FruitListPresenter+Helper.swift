@@ -9,7 +9,7 @@ extension FruitListPresenter {
     /// Call this method to obtain a Detailed viewer for a given FruitViewModel Object.
     ///
     /// - Parameter FruitViewModel: FruitViewModel Object to use.
-    /// - Returns: DetailedPhotoViewerViewController.
+    /// - Returns: DetailedViewerViewController.
     func detailedPhotoViewerViewController(with fruitViewModel: FruitViewModel, shouldHideDetails: Bool = false) -> DetailedViewerViewController? {
 
         let coordinator: Coordinatable = DetailedViewerNavigationCoordinator()

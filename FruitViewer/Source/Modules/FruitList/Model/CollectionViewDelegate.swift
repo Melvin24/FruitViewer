@@ -52,6 +52,7 @@ class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        // Obtain user initiated display time
         let userInitiatedDate = Date()
         
         let fruitViewModels = viewController.presenter.fruitViewModels
@@ -62,13 +63,14 @@ class CollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionVi
 
         
         guard let navigationController = viewController.navigationController,
-              let detailedPhotoViewController = viewController.presenter.detailedPhotoViewerViewController(with: fruitViewModels[indexPath.row]) else {
+              let detailedViewerViewController = viewController.presenter.detailedPhotoViewerViewController(with: fruitViewModels[indexPath.row]) else {
             return
         }
         
-        detailedPhotoViewController.userInitiatedDate = userInitiatedDate
+        // set to viewcontroller for obtain display render duration.
+        detailedViewerViewController.userInitiatedDate = userInitiatedDate
         
-        viewController.pushViewControllerToNavigationController(navigationController)(detailedPhotoViewController, true)
+        viewController.pushViewControllerToNavigationController(navigationController)(detailedViewerViewController, true)
                 
     }
     

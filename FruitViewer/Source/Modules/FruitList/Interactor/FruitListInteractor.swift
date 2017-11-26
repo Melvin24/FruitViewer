@@ -4,6 +4,7 @@
 
 import Foundation
 
+/// Interactor, responsible for making the API to fetch Fruit list.
 class FruitListInteractor: Interactor {
     
     /// Current Task.
