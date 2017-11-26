@@ -6,6 +6,8 @@ import Foundation
 
 class FruitDataNetworkService {
     
+    var URLPath = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json"
+    
     /// Network Error
     enum FruitDataNetworkingError: Error {
         
@@ -26,10 +28,8 @@ class FruitDataNetworkService {
         
         return { completion in
             
-            let URLPath = "https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/data.json"
-            
-            guard let fruitAPIURL = URL(string: URLPath) else {
-                throw NetworkServiceError.couldNotBuildURL(URLPath: URLPath)
+            guard let fruitAPIURL = URL(string: self.URLPath) else {
+                throw NetworkServiceError.couldNotBuildURL(URLPath: self.URLPath)
             }
             
             return session.dataTask(with: fruitAPIURL) { data, response, error in

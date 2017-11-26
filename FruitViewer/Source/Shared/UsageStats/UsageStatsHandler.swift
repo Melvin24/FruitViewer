@@ -31,6 +31,12 @@ class UsageStatsHandler {
     private var task: Task?
     
     private var pendingUsageStatsUpdate: [UsageStatsType] = []
+    
+    deinit {
+        notificationCenter.removeObserver(self, name: UsageStatsNotificationName.load, object: nil)
+        notificationCenter.removeObserver(self, name: UsageStatsNotificationName.display, object: nil)
+        notificationCenter.removeObserver(self, name: UsageStatsNotificationName.error, object: nil)
+    }
 
     func activate() {
         notificationCenter.addObserver(forName: UsageStatsNotificationName.load , object: nil, queue: nil, using: handleNotification)
@@ -54,7 +60,7 @@ class UsageStatsHandler {
             return
         }
         
-        updateUserStats(usingUsageStatsType: usageStatsType)
+        updateUserStatsUsingUsageStats(self)(usageStatsType)
         
     }
     
@@ -78,12 +84,16 @@ class UsageStatsHandler {
                 
                 dispatchGroup?.leave()
                 
-                // if not successful and an error
-                if !success, let error = error  {
-                    self?.logNetworkServiceError(error, forUsageStatsType: usageStatsType)
+                guard let strongSelf = self else {
+                    return
                 }
                 
-                self?.clearPendingUsageStats()
+                // if not successful and an error
+                if !success, let error = error  {
+                    strongSelf.logNetworkRequestError(strongSelf)(error, usageStatsType)
+                }
+                
+                strongSelf.executePendingUsageStats(strongSelf)()
                 
             }
             
@@ -92,10 +102,10 @@ class UsageStatsHandler {
             _ = dispatchGroup?.wait(timeout: DispatchTime.now() + 5)
 
         } catch let error as NetworkServiceError {
-            self.logNetworkServiceError(error, forUsageStatsType: usageStatsType)
-            self.clearPendingUsageStats()
+            logNetworkRequestError(self)(error, usageStatsType)
+            executePendingUsageStats(self)()
         } catch {
-            self.clearPendingUsageStats()
+            executePendingUsageStats(self)()
             return
         }
     }
@@ -117,23 +127,6 @@ class UsageStatsHandler {
         let lastUsageStats = pendingUsageStatsUpdate.removeLast()
         
         updateUserStats(usingUsageStatsType: lastUsageStats)
-    }
-    
-    func logNetworkServiceError(_ networkServiceError: NetworkServiceError, forUsageStatsType usageStatsType: UsageStatsType) {
-        
-        var message = "Failed to update \(usageStatsType.debugLogName()), "
-        
-        switch networkServiceError {
-        case.couldNotBuildURL(URLPath: let urlPath):
-            message = message + "failed to build \(urlPath)"
-        case .noConnection:
-            message = message + "no network connection"
-        case .HTTPError(type: let response):
-            guard response != .success || response != .redirection else {
-                return
-            }
-            message = message + "because of unexpected error, \(response.rawValue)"
-        }
     }
     
     func urlPath(for usageStatsType: UsageStatsType) -> String {
@@ -160,4 +153,26 @@ class UsageStatsHandler {
         return "\(baseURLPath)\(suffix)"
 
     }
+    
+    func logNetworkServiceError(_ networkServiceError: NetworkServiceError, forUsageStatsType usageStatsType: UsageStatsType) {
+        
+        var message = "Failed to update \(usageStatsType.debugLogName()), "
+        
+        switch networkServiceError {
+        case.couldNotBuildURL(URLPath: let urlPath):
+            message = message + "failed to build \(urlPath)"
+        case .noConnection:
+            message = message + "no network connection"
+        case .HTTPError(type: let response):
+            guard response != .success || response != .redirection else {
+                return
+            }
+            message = message + "because of unexpected error, \(response.rawValue)"
+        }
+    }
+    
+    // TEST INJECTION
+    var updateUserStatsUsingUsageStats = UsageStatsHandler.updateUserStats
+    var executePendingUsageStats = UsageStatsHandler.clearPendingUsageStats
+    var logNetworkRequestError = UsageStatsHandler.logNetworkServiceError
 }

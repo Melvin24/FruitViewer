@@ -1,10 +1,6 @@
 //
 //  UsageStatsErrorNotifier.swift
 //  FruitViewer
-//
-//  Created by John, Melvin (Associate Software Developer) on 25/11/2017.
-//  Copyright © 2017 John, Melvin (Associate Software Developer). All rights reserved.
-//
 
 import Foundation
 
@@ -12,7 +8,7 @@ import Foundation
 class UsageStatsErrorNotifier: NSObject {
     
     @objc
-    static func notifyException(_ exception: NSException) {
+    static func notifyException(_ exception: NSException, notificationCenter: NotificationCenter = .default) {
         
         let message = exception.reason
         
@@ -20,9 +16,9 @@ class UsageStatsErrorNotifier: NSObject {
         
         let userInfo: [AnyHashable: Any] = [key: UsageStatsType.error(UsageStatsErrorInfo(message: message ?? ""))]
         
-        NotificationCenter.default.post(name: UsageStatsHandler.UsageStatsNotificationName.error,
-                                        object: nil,
-                                        userInfo: userInfo)
+        notificationCenter.post(name: UsageStatsHandler.UsageStatsNotificationName.error,
+                              object: nil,
+                            userInfo: userInfo)
         
     }
 }

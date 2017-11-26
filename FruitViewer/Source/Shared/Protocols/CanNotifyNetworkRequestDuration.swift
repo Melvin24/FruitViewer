@@ -10,13 +10,13 @@ import Foundation
 
 protocol CanNotifyNetworkRequestDuration {
     
-    func notifyNetworkRequestDuration(startDate: Date, endDate: Date) -> Void
+    func notifyNetworkRequestDuration(startDate: Date, endDate: Date, notificationCenter: NotificationCenter) -> Void
     
 }
 
 extension CanNotifyNetworkRequestDuration {
     
-    func notifyNetworkRequestDuration(startDate: Date, endDate: Date) -> Void {
+    func notifyNetworkRequestDuration(startDate: Date, endDate: Date, notificationCenter: NotificationCenter = .default) -> Void {
         
        let executionTime = endDate.timeIntervalSince(startDate)
         
@@ -26,8 +26,8 @@ extension CanNotifyNetworkRequestDuration {
         
         let userInfo: [AnyHashable: Any] = [key: UsageStatsType.load(UsageStatsLoadInfo(requestTime: Int(requestTime)))]
         
-        NotificationCenter.default.post(name: UsageStatsHandler.UsageStatsNotificationName.load,
-                                        object: nil,
-                                        userInfo: userInfo)
+        notificationCenter.post(name: UsageStatsHandler.UsageStatsNotificationName.load,
+                              object: nil,
+                            userInfo: userInfo)
     }
 }

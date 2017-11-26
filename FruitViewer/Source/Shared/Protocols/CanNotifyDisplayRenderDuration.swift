@@ -10,13 +10,13 @@ import Foundation
 
 protocol CanNotifyDisplayRenderDuration {
     
-    func notifyDisplayRenderDuration(startDate: Date, endDate: Date) -> Void
+    func notifyDisplayRenderDuration(startDate: Date, endDate: Date, notificationCenter: NotificationCenter) -> Void
     
 }
 
 extension CanNotifyDisplayRenderDuration {
     
-    func notifyDisplayRenderDuration(startDate: Date, endDate: Date) -> Void {
+    func notifyDisplayRenderDuration(startDate: Date, endDate: Date, notificationCenter: NotificationCenter = .default) -> Void {
         
         let executionTime = endDate.timeIntervalSince(startDate)
         
@@ -26,8 +26,8 @@ extension CanNotifyDisplayRenderDuration {
         
         let userInfo: [AnyHashable: Any] = [key: UsageStatsType.display(UsageStatsDisplayInfo(requestTime: Int(requestTime)))]
         
-        NotificationCenter.default.post(name: UsageStatsHandler.UsageStatsNotificationName.display,
-                                      object: nil,
-                                    userInfo: userInfo)
+        notificationCenter.post(name: UsageStatsHandler.UsageStatsNotificationName.display,
+                              object: nil,
+                            userInfo: userInfo)
     }
 }

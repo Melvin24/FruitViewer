@@ -10,9 +10,9 @@ import Foundation
 
 class UsageStatsNetworkService {
     
-    public typealias Completion = (Bool, NetworkServiceError?) -> Void
+    typealias Completion = (Bool, NetworkServiceError?) -> Void
     
-    public typealias Request = (@escaping Completion) throws -> Task
+    typealias Request = (@escaping Completion) throws -> Task
     
     /// Call this method to obtain a request to fetch fruit data.
     func updateUsageStats(withURLPath URLPath: String, session: URLSession) -> Request {

@@ -64,6 +64,14 @@ struct Fruit: Decodable {
     
     let name: String
     
+    init(price: Double, type: Kind, weight: Double, image: UIImage?, name: String) {
+        self.price = price
+        self.type = type
+        self.weight = weight
+        self.image = image
+        self.name = name
+    }
+    
     init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: FruitCodingKey.self)
